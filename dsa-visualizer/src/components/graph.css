@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900);
+
+.example-appear {
+    opacity: 0.01;
+  }
+  
+.example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+.button4{
+    background-color:#463492;
+    color: black;
+    border: 2px solid #e7e7e7;
+  }
+
+.button{
+    font-family:'Georgia';
+    border:1px solid gray;
+    color: white;
+    padding: 2.5px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.txt{
+	height: 26px;
+	width: 200px;
+	border-bottom: 2px solid gray;
+	border-radius: 4px;
+}
+.button:hover{
+    background-color: #2a1879;
+    transition-duration: .4s;
+}
+.button:disabled{
+    cursor: not-allowed;
+    background-color: rgb(212, 210, 231);
+    color: gray
+}
+input
+{
+	font-family:Monotype Corsiva;
+  font-size: 16px;
+  border-radius: 3px;
+}
+.input::selection{
+  border-color: #33cc33;
+}
+rect {
+  width: 100%;
+  height: 100%;
+  opacity: 0
+}
+.h1
+{
+  font-family:'Georgia',cursive;
+}
+.draggable{
+  cursor:pointer
+}

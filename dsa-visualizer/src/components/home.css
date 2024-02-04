@@ -1,0 +1,15 @@
+.container{
+    color: white;
+  background-color: rgb(25,31,44);
+  }
+
+.heading {
+    background-color: rgb(43,48,61);
+    color: white;
+}
+
+.card-body {
+    background-color: rgb(43,48,61);
+    width: 200px;
+    height: auto;
+}
