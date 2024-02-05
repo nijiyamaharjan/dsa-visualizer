@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './home.css';
 
 export class Home extends Component {
+    componentDidMount() {
+        document.body.style.overflow = 'hidden';
+    }
+
     render() {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center gradient-container">
@@ -10,7 +14,7 @@ export class Home extends Component {
                     DATA STRUCTURES AND ALGORITHMS VISUALIZER
                 </h1>
                 <div className="flex  w-full h-full items-center justify-center">
-                        <div>
+                    <div>
                         <div className="flex mb-4">
                             {this.renderCard('DataStructures', 'Stack, Queue, Linked List', '/DataStructures')}
                             {this.renderCard('Sorting', 'Bubble Sort, Insertion Sort, Quick Sort', '/Sorting')}
@@ -28,7 +32,6 @@ export class Home extends Component {
             </div>
         );
     }
-
 
     renderCard(title, description, link) {
         return (
@@ -53,6 +56,5 @@ export class Home extends Component {
         );
     }
 }
-
 
 export default Home;

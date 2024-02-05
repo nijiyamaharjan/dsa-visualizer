@@ -89,15 +89,9 @@ export class GraphAlgorithm extends Component {
                 </div>
                 <div className="row">
                 <div className="col-12" style={{backgroundColor:'#fafafa',border:'.5px solid #d6d6d6',borderRadius:'4px',padding:'10px 10px 0px 10px'}}>
-                <div className="row">
-                    <div className="col-2"></div>
-                    <div className="col-8 box" >
-                        <p style={{fontFamily:'Georgia'}}> The application is aimed to help the users better understand the famous algorithms on graph by visualizing the steps and realizing how the algorithm actually works. The graph is user generated and the edge weights of weighted graphs are randomly generated and can be changed by the click of a button.</p>
-                        <p>For any query/sugesstion/feedback, mail at: <b>pratimsarkar23@gmail.com</b></p>
-                    </div>
-                    <div className="col-2"></div>
+                
                 </div>
-                </div></div>
+                </div>
             </div>
             </center>
         )
