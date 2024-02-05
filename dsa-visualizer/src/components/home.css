@@ -8,17 +8,16 @@
   }
 
   .glassmorphism-title {
-    font-size: 1.5rem; /* Adjust the font size as needed */
+    font-size: 1.5rem; 
     margin-bottom: 0.5rem;
   }
 
-  /* Add this to your home.css file */
 
 .card-container:hover {
-    filter: brightness(80%); /* You can adjust the brightness value as needed */
+    filter: brightness(80%);
   }
   
-  /* Optional: Add a transition for a smooth effect */
+  
   .card-container {
     transition: filter 0.3s ease;
   }
