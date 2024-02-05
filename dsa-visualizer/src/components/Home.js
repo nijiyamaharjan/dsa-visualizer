@@ -1,6 +1,7 @@
 import React, { Component, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './home.css';
+import { Helmet } from 'react-helmet';
 
 export class Home extends Component {
     componentDidMount() {
@@ -15,6 +16,9 @@ export class Home extends Component {
                 </h1>
                 <div className="flex  w-full h-full items-center justify-center">
                     <div>
+                        <Helmet>
+                            <title>Visualizer</title>
+                        </Helmet>
                         <div className="flex mb-4">
                             {this.renderCard('DataStructures', 'Stack, Queue, Linked List', '/DataStructures')}
                             {this.renderCard('Sorting', 'Bubble Sort, Insertion Sort, Quick Sort', '/Sorting')}
@@ -35,9 +39,9 @@ export class Home extends Component {
 
     renderCard(title, description, link) {
         return (
-            <div className="flex h-screen">
+            <div className="flex h-screen card-container">
                 <div className="m-10">
-                    <div className="w-full max-w-md bg-white bg-opacity-20 rounded-md shadow-xl flex flex-col items-center">
+                    <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md shadow-xl flex flex-col items-center">
                         <h3 className="glassmorphism-title p-10">
                             {title}
                         </h3>
@@ -55,6 +59,7 @@ export class Home extends Component {
             </div>
         );
     }
+
 }
 
 export default Home;
