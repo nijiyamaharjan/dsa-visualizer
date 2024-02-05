@@ -6,7 +6,7 @@ import './graph.css'
 export class GraphAlgorithm extends Component {
     render() {
         return (
-            
+            <center>
             <div>
             <Helmet>
         <title>Graph Algorithms</title>
@@ -89,13 +89,11 @@ export class GraphAlgorithm extends Component {
                 </div>
                 <div className="row">
                 <div className="col-12" style={{backgroundColor:'#fafafa',border:'.5px solid #d6d6d6',borderRadius:'4px',padding:'10px 10px 0px 10px'}}>
-                <div className="row">
-                    <div className="col-2"></div>
-                    <div className="col-2"></div>
+                
                 </div>
-                </div></div>
+                </div>
             </div>
-            
+            </center>
         )
     }
 }

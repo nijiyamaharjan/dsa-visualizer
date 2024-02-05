@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 function LandingPage() {
   return (
     <>
+    
+                <Helmet>
+        <title>Visualizer</title>
+      </Helmet>
       <div className="min-h-screen flex items-center justify-center gradient-container">
         <div className="flex m-20 w-1/2 h-fu bg-white bg-opacity-20 rounded-md shadow-lg items-center">
           <div className="w-1/2 pr-4 p-8">

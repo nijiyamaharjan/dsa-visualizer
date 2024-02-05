@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './home.css';
 import { Helmet } from 'react-helmet';
 
 export class Home extends Component {
+    componentDidMount() {
+        document.body.style.overflow = 'hidden';
+    }
+
     render() {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center gradient-container">
@@ -33,7 +37,6 @@ export class Home extends Component {
         );
     }
 
-
     renderCard(title, description, link) {
         return (
             <div className="flex h-screen card-container">
@@ -58,6 +61,5 @@ export class Home extends Component {
     }
 
 }
-
 
 export default Home;
