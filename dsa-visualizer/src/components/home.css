@@ -11,3 +11,15 @@
     font-size: 1.5rem; /* Adjust the font size as needed */
     margin-bottom: 0.5rem;
   }
+
+  /* Add this to your home.css file */
+
+.card-container:hover {
+    filter: brightness(80%); /* You can adjust the brightness value as needed */
+  }
+  
+  /* Optional: Add a transition for a smooth effect */
+  .card-container {
+    transition: filter 0.3s ease;
+  }
+  
