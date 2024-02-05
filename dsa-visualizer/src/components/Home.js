@@ -41,7 +41,7 @@ export class Home extends Component {
         return (
             <div className="flex h-screen card-container">
                 <div className="m-10">
-                    <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md shadow-xl flex flex-col items-center">
+                    <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md shadow-xl flex flex-col items-center card-wrapper">
                         <h3 className="glassmorphism-title p-10">
                             {title}
                         </h3>
