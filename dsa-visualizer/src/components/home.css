@@ -1,4 +1,3 @@
-/* Add these styles to your CSS file */
 .glassmorphism-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -17,7 +16,7 @@
     filter: brightness(80%);
   }
   
-  
+
   .card-container {
     transition: filter 0.3s ease;
   }
