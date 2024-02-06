@@ -86,7 +86,7 @@ class Searching extends Component {
     let counter = 0;
     const timer = setInterval(() => {
       let box = `box-wrapper-${counter}`;
-  
+  console.log(arr[counter]);
       if (counter !== 0) {
         // hiding arrow
         // Example: document.getElementById(box).style.display = "none";
@@ -100,28 +100,32 @@ class Searching extends Component {
         // Example: document.getElementById(box).style.display = "block";
         var innerTimer = setTimeout(() => {
           // Example: document.getElementById(box).style.backgroundColor = this.failureColor;
-        }, 500);
+        }, 100);
       }
   
       if (arr[counter] === value) {
         clearInterval(innerTimer);
-        // displaying arrow
-        // Example: document.getElementById(box).style.display = "block";
-        // Example: document.getElementById(box).style.backgroundColor = this.successColor;
         alert("Element Found At Index " + counter);
         clearInterval(timer);
       }
       counter++;
-    }, 1000);
+    }, 100);
   };
 
   binarySearch = (arr, x, start, end) => {
+    
     if (start > end) {
       alert("Element not Found");
       return false;
     }
+    else{
+        var innerTimer = setTimeout(() => {
+            // Example: document.getElementById(box).style.backgroundColor = this.failureColor;
+          }, 500);
+    }
   
     let mid = Math.floor((start + end) / 2);
+    console.log(arr[mid]);
     let previousMid = mid;
     let box = `box-wrapper-${mid}`;
   
@@ -201,15 +205,15 @@ class Searching extends Component {
                       {/* For element to be searched */}
                       <div className="search-element">
                       <input
-  type="text"
-  placeholder="Enter element to search"
-  id="valueForSearch"
-  value={this.state.elementToSearch}
-  onChange={(e) => this.setState({ elementToSearch: e.target.value })}
-  required="required"
-  autoComplete="off"
-  style={{ color: 'blue' }}
-/>
+                        type="text"
+                        placeholder="Enter element to search"
+                        id="valueForSearch"
+                        value={this.state.elementToSearch}
+                        onChange={(e) => this.setState({ elementToSearch: e.target.value })}
+                        required="required"
+                        autoComplete="off"
+                        style={{ color: 'blue' }}
+                        />
                       </div>
                       {/* For search to start */}
                       <div className="search-wrapper">
