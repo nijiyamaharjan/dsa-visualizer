@@ -98,6 +98,7 @@ rect {
   border-radius: 0.25rem;
   transition: background-color 0.3s ease; /* Add transition for smoother effect */
   cursor: pointer;
+  background-color: black;
 }
 
 .button4:hover {
