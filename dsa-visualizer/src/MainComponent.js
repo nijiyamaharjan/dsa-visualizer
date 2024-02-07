@@ -10,12 +10,14 @@ import Searching from './components/Searching';
 import GraphAlgorithm from './components/GraphAlgorithm';
 import Tree from './components/Tree';
 import Home from './components/Home';
+import LandingPage from './components/LandingPage';
 
 
 function MainComponent() {
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/' element={<LandingPage/>} />
+      <Route path='/home' element={<Home />} />
       <Route path='/bfsdfs' element={<Canvas />} />
       <Route path='/dijkstra' element={<ShortestPath />} />
       <Route path='/PrimMST' element={<ShortestPath />} />
