@@ -8,11 +8,6 @@
     opacity: 1;
     transition: opacity .5s ease-in;
   }
-.button4{
-    background-color:#463492;
-    color: black;
-    border: 2px solid #e7e7e7;
-  }
 
 .button{
     font-family:'Georgia';
@@ -64,4 +59,49 @@ rect {
 }
 .draggable{
   cursor:pointer
+}
+/* Add these styles to your graph.css */
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+  background-color: rgba(255, 255, 255, 0.2); /* Adjust the transparency as needed */
+  transition: background-color 0.3s ease; /* Add transition for smoother effect */
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Adjust the hover transparency as needed */
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  color: #333;
+}
+
+.card-text {
+  color: #555;
+}
+
+.button4 {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease; /* Add transition for smoother effect */
+  cursor: pointer;
+  background-color: black;
+}
+
+.button4:hover {
+  background-color: #4CAF50; /* Adjust the hover background color as needed */
+  color: white; /* Adjust the hover text color as needed */
 }

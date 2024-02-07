@@ -1,122 +1,65 @@
-import React, { Component } from 'react'
-import {NavLink} from 'react-router-dom'
+import React, { Component, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import './home.css';
 import { Helmet } from 'react-helmet';
-import './home.css'
 
 export class Home extends Component {
+    componentDidMount() {
+        document.body.style.overflow = 'hidden';
+    }
+
     render() {
         return (
-            <center>
-            <div>
-            <Helmet>
-        <title>Visualizer</title>
-      </Helmet>
-            <br/>
-                <h1 className="heading">
+            <div className="min-h-screen flex flex-col items-center justify-center gradient-container">
+                <h1 className="text-4xl font-bold text-gray-700 mb-40 mt-10">
                     DATA STRUCTURES AND ALGORITHMS VISUALIZER
                 </h1>
-                <br/>
-                <div className="container">
-                    <div className="row">
-                    
-                    <div className="col-sm-12 col-md-3">
-                    <center>
-                    <div className="card box">
-                    
-                    <div className="card-body">
-                        <h3 className="card-title" style={{fontFamily:'Georgia'}}><br/>Data Structures</h3>
-                        <p style={{fontFamily: 'Georgia'}} className="card-text">Stack, Queue, Linked List</p>
-                        <center>
-                        <NavLink to='/DataStructures' style={{width:'70%',color:'white',fontFamily:'Georgia'}} className="button button4">Data Structures</NavLink>
-                        </center>
-                    </div>
-                    </div>
-                    </center>
-                    </div>
-    
-                    <div className="col-sm-12 col-md-3">
-                    <center>
-                    <div className="card box">
-                    
-                    <div className="card-body">
-                        <h3 className="card-title" style={{fontFamily:'Georgia'}}><br/>Sorting</h3>
-                        <p style={{fontFamily: 'Georgia'}} className="card-text">Bubble Sort, Insertion Sort, Quick Sort</p>
-                        <center>
-                        <NavLink to='/Sorting' style={{width:'70%',color:'white',fontFamily:'Georgia'}} className="button button4">Sorting</NavLink>
-                        </center>
-                    </div>
-                    </div>
-                    </center>
-                    </div>
-
-                    <div className="col-sm-12 col-md-3">
-                    <center>
-                    <div className="card box">
-                    
-                    <div className="card-body">
-                        <h3 className="card-title" style={{fontFamily:'Georgia'}}><br/>Searching</h3>
-                        <p style={{fontFamily: 'Georgia'}} className="card-text">Linear Search, Binary Search</p>
-                        <center>
-                        <NavLink to='/Searching' style={{width:'70%',color:'white',fontFamily:'Georgia'}} className="button button4">Searching</NavLink>
-                        </center>
-                    </div>
-                    </div>
-                    </center>
-                    </div>
-
-                    <div className="col-sm-12 col-md-3">
-                    <center>
-                    <div className="card box">
-                    
-                    <div className="card-body">
-                        <h3 className="card-title" style={{fontFamily:'Georgia'}}><br/>Graph</h3>
-                        <p style={{fontFamily: 'Georgia'}} className="card-text">Dijkstra, Prim, BFS, DFS</p>
-                        <center>
-                        <NavLink to='/GraphAlgorithm' style={{width:'70%',color:'white',fontFamily:'Georgia'}} className="button button4">Graph</NavLink>
-                        </center>
-                    </div>
-                    </div>
-                    </center>
-                    </div>
-
-
-                    <div className="col-sm-12 col-md-3">
-                    <center>
-                    <div className="card box">
-                    
-                    <div className="card-body">
-                        <h3 className="card-title" style={{fontFamily:'Georgia'}}><br/>Tree</h3>
-                        <p style={{fontFamily: 'Georgia'}} className="card-text">Binary Tree Traversal</p>
-                        <center>
-                        <NavLink to='/Tree' style={{width:'70%',color:'white',fontFamily:'Georgia'}} className="button button4">Tree</NavLink>
-                        </center>
-                    </div>
-                    </div>
-                    </center>
-                    </div>
-
+                <div className="flex  w-full h-full items-center justify-center">
+                    <div>
+                        <Helmet>
+                            <title>Visualizer</title>
+                        </Helmet>
+                        <div className="flex mb-4">
+                            {this.renderCard('DataStructures', 'Stack, Queue, Linked List', '/DataStructures')}
+                            {this.renderCard('Sorting', 'Bubble Sort, Insertion Sort, Quick Sort', '/Sorting')}
+                            {this.renderCard('Searching', 'Linear Search, Binary Search', '/Searching')}
+                            {this.renderCard('Graph', 'Dijkstra, Prim, BFS, DFS', '/GraphAlgorithm')}
+                            {this.renderCard('Tree', 'Binary Tree Traversal', '/Tree')}
+                        </div>
                     </div>
                 </div>
-
-                <div className="row">
-                <div className="col-12">
-                <br/><br/>
+                <div className="text-center py-7">
+                    <p className="text-gray-700">
+                        The application is aimed to help the users better understand various data structures and algorithms.
+                    </p>
                 </div>
-                </div>
-                <div className="row">
-                <div className="col-12">
-                <div className="row">
-                    <div className="col-2"></div>
-                    <div className="col-8 box" >
-                        <p style={{fontFamily:'Georgia'}}> The application is aimed to help the users better understand various data structures and algorithms.</p>
-                    </div>
-                    <div className="col-2"></div>
-                </div>
-                </div></div>
             </div>
-            </center>
-        )
+        );
     }
+
+    renderCard(title, description, link) {
+        return (
+            <div className="flex h-screen card-container">
+                <div className="m-10">
+                    <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md shadow-xl flex flex-col items-center card-wrapper">
+                        <h3 className="glassmorphism-title p-10">
+                            {title}
+                        </h3>
+                        <p style={{ fontFamily: 'Georgia' }} className="glassmorphism-text p-10">
+                            {description}
+                        </p>
+                        <NavLink
+                            to={link}
+                            className="p-4 text-white bg-gray-700 hover:bg-black focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                        >
+                            {title}
+                        </NavLink>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
 }
 
-export default Home
+export default Home;
