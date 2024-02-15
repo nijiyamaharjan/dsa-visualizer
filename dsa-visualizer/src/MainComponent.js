@@ -12,6 +12,7 @@ import Tree from './components/Tree';
 import Home from './components/Home';
 import LandingPage from './components/LandingPage';
 import Stack from './components/Data-Structures/Stack'
+import Queue from './components/Data-Structures/Queue'
 
 
 function MainComponent() {
@@ -29,6 +30,7 @@ function MainComponent() {
       <Route path='/GraphAlgorithm' element={<GraphAlgorithm />} />
       <Route path='/DataStructures' element={<DataStructures />} />
       <Route path='/Stack' element={<Stack />} />
+      <Route path='/Queue' element={<Queue />} />
     </Routes>
   );
 }
