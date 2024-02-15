@@ -60,7 +60,7 @@ input {
 .box {
   position: relative;
   margin-left: 15px;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   font-size: 20px;
   width: 89px;
   height: 68px;
