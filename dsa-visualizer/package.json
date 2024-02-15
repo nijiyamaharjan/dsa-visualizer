@@ -1,7 +1,7 @@
 {
   "name": "dsa-visualizer",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://nijiyamaharjan.github.io/dsa-visualizer",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
