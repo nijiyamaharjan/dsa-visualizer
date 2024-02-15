@@ -1,0 +1,27 @@
+.glassmorphism-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+.glassmorphism-title {
+    font-size: 1.5rem; 
+    margin-bottom: 0.5rem;
+  }
+
+
+.card-container:hover {
+    filter: brightness(80%);
+  }
+  
+
+.card-container {
+    transition: filter 0.3s ease;
+  }
+  
+.card-wrapper:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}

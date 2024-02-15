@@ -1,0 +1,43 @@
+/* queue.css */
+
+.wrapper {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #item {
+    margin-bottom: 10px;
+  }
+  
+  #queue {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .queue-item {
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+    margin-right: 10px; /* Add some space between items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  #enqueue-item {
+    color: black;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
