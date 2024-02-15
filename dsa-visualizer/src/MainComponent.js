@@ -13,6 +13,7 @@ import Home from './components/Home';
 import LandingPage from './components/LandingPage';
 import Stack from './components/Data-Structures/Stack'
 import Queue from './components/Data-Structures/Queue'
+import LinkedList from './components/Data-Structures/LinkedList';
 
 
 function MainComponent() {
@@ -31,6 +32,7 @@ function MainComponent() {
       <Route path='/DataStructures' element={<DataStructures />} />
       <Route path='/Stack' element={<Stack />} />
       <Route path='/Queue' element={<Queue />} />
+      <Route path='/LinkedList' element={<LinkedList />} />
     </Routes>
   );
 }
