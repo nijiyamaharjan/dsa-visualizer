@@ -47,6 +47,12 @@ class LinkedList extends Component {
         }
     }
 
+    // Function to handle removing a node at a specific index
+    removeNodeAtIndexInput = () => {
+        const index = parseInt(this.removeIndexInput.value);
+        this.removeNodeAtIndex(index);
+    }
+
     render() {
         const { nodes, error } = this.state;
 
@@ -85,12 +91,15 @@ class LinkedList extends Component {
                     <section className="operations">
                         <div className="wrapper">
                             <div>
-                                <button className="button" id="add-btn" onClick={this.addNode}>Add</button>
-                                <input type="number" ref={input => this.newDataInput = input} placeholder="Data" />
+                                
+                                Data:<input type="number" ref={input => this.newDataInput = input} placeholder="Data" /><br></br>
+                                <button className="button" id="add-btn" onClick={this.addNode}>Add at End</button><br></br>
+                                Index:<input type="number" ref={input => this.newIndexInput = input} placeholder="Index" />
+                                <button className="button" id="add-index-btn" onClick={this.addNodeAtIndex}>Add at Index</button>
                             </div>
                             <div>
-                                <button className="button" id="add-index-btn" onClick={this.addNodeAtIndex}>Add at Index</button>
-                                <input type="number" ref={input => this.newIndexInput = input} placeholder="Index" />
+                                <button className="button" id="remove-index-btn" onClick={this.removeNodeAtIndexInput}>Remove at Index</button>
+                                <input type="number" ref={input => this.removeIndexInput = input} placeholder="Index" />
                             </div>
                         </div>
                     </section>

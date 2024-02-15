@@ -31,7 +31,7 @@ export class DataStructures extends Component {
 
     renderCard(title, link) {
         return (
-            <div className="flex h-screen card-container">
+            <div className="flex h-screen card-container text-gray-700">
                 <div className="m-10">
                     <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md shadow-xl flex flex-col items-center card-wrapper">
                         <h3 className="glassmorphism-title p-10">
