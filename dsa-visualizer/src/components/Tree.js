@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 class Tree extends Component {
     render() {
         return (
-            <div>
+            <div className='bg'>
                 <Helmet>
         <title>Tree</title>
       </Helmet>

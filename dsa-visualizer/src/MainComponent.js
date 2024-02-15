@@ -11,6 +11,7 @@ import GraphAlgorithm from './components/GraphAlgorithm';
 import Tree from './components/Tree';
 import Home from './components/Home';
 import LandingPage from './components/LandingPage';
+import Stack from './components/Data-Structures/Stack'
 
 
 function MainComponent() {
@@ -27,6 +28,7 @@ function MainComponent() {
       <Route path='/Tree' element={<Tree />} />
       <Route path='/GraphAlgorithm' element={<GraphAlgorithm />} />
       <Route path='/DataStructures' element={<DataStructures />} />
+      <Route path='/Stack' element={<Stack />} />
     </Routes>
   );
 }
