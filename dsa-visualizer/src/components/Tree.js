@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
-class Sorting extends Component {
+class Tree extends Component {
     render() {
         return (
-            <div>
+            <div className='bg'>
                 <Helmet>
-        <title>Sorting</title>
+        <title>Tree</title>
       </Helmet>
-                <center>SORTING</center>
+                <center>TREE</center>
             </div>
         );
     }
 }
 
-export default Sorting;
+export default Tree;

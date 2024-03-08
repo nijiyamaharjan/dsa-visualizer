@@ -10,6 +10,9 @@ import Searching from './components/Searching';
 import GraphAlgorithm from './components/GraphAlgorithm';
 import Home from './components/Home';
 import LandingPage from './components/LandingPage';
+import Stack from './components/Data-Structures/Stack'
+import Queue from './components/Data-Structures/Queue'
+import LinkedList from './components/Data-Structures/LinkedList';
 import Tree from './components/Tree/Tree';
 
 
@@ -27,6 +30,9 @@ function MainComponent() {
       <Route path='/Tree' element={<Tree />} />
       <Route path='/GraphAlgorithm' element={<GraphAlgorithm />} />
       <Route path='/DataStructures' element={<DataStructures />} />
+      <Route path='/Stack' element={<Stack />} />
+      <Route path='/Queue' element={<Queue />} />
+      <Route path='/LinkedList' element={<LinkedList />} />
     </Routes>
   );
 }
