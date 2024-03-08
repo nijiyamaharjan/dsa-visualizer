@@ -26,11 +26,11 @@ const SortingControls = ({
             'Bubble Sort',
             'Selection Sort',
             'Insertion Sort',
-            'Merge Sort',
+            /*'Merge Sort',
             'Quick Sort',
             'Quick Sort 3',
             'Heap Sort',
-            'Shell Sort'
+            'Shell Sort'*/
           ]}
           selected={algorithm}
           onSelect={onAlgorithmChange}

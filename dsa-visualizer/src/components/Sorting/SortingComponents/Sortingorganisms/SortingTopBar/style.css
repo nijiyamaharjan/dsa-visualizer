@@ -24,7 +24,7 @@
 
   background-color: var(--background-color-3);
   z-index: 105;
-  box-shadow: 0px 11px 22px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0px 11px 22px rgba(0, 0, 0, 0.3); */
 
   transition: background-color 500ms ease-in-out;
 }
