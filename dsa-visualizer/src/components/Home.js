@@ -22,7 +22,7 @@ export class Home extends Component {
                         <div className="flex justify-center items-center mb-4 text-gray-700">
                             {/* {this.renderCard('DataStructures', 'Stack, Queue, Linked List', '/DataStructures', 'https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')} */}
                             {this.renderCard('Sorting', 'Bubble/Insertion/Quick', '/Sorting','https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')}
-                            {this.renderCard('Searching', 'Linear/Binary Search', '/Searching','https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')}
+                           
                             {this.renderCard('Graph', 'Dijkstra, Prim, BFS, DFS', '/GraphAlgorithm','https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')}
                             {this.renderCard('Tree', 'Binary Tree Traversal', '/Tree','https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')}
                         </div>
