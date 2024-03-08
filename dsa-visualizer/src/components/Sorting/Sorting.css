@@ -20,7 +20,7 @@
 }
 
 .Sorting__Body {
-    overflow: hidden;
+    /* overflow: hidden; */
     /* border-top: 1px solid #202020; */
     margin-top: 125px;
     margin-left: 25px;

@@ -20,8 +20,8 @@
 
   text-align: justify;
   list-style: none;
-  background-color: var(--background-color-2);
-  overflow: scroll;
+  background-color: white;
+
 }
 
 .Menu__Header {
