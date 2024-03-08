@@ -13,8 +13,8 @@
   overflow: hidden;
 
   /* background-color: var(--background-color-3); */
-  box-shadow: var(--elevation-umbra-4) var(--elevation-umbra-color),
-    var(--elevation-penumbra-4) var(--elevation-penumbra-color);
+  /* box-shadow: var(--elevation-umbra-4) var(--elevation-umbra-color),
+    var(--elevation-penumbra-4) var(--elevation-penumbra-color); */
 
   transition: all 500ms ease-in-out;
 }
