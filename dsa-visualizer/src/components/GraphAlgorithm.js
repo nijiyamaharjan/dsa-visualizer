@@ -12,12 +12,12 @@ export class GraphAlgorithm extends Component {
                 </Helmet>
                 <br />
                 <h1 className="text-4xl font-bold text-gray-700 mb-10 mt-10 heading">
-                    GRAPH ALGORITHM VISUALIZER
+                    GRAPH ALGORITHMS VISUALIZER
                 </h1>
                 <br />
                 <div className="container mt-20">
                     <div className="flex flex-wrap justify-center">
-                        <div className="w-full md:w-1/4 mb-6 p-4">
+                        <div className="w-full md:w-1/4 mb-6 mr-6 p-4">
                             <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md shadow-xl flex flex-col items-center card-wrapper">
                                 <div className="card-body p-6">
                                     <h3 className="card-title mb-4 text-lg text-white">
