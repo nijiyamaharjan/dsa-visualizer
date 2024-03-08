@@ -4,7 +4,7 @@ import TreeDiagram from "./components/TreeDiagram";
 import TransitionedList from "./components/TransitionedList";
 import TraversalInfo from "./components/TraversalInfo";
 
-import Dropdown from "./components/util/Dropdown";
+import Dropdown from "./components/util/Options";
 import Treecomp from "./components/util/Tree-comp";
 
 import "./styles/App.css";
@@ -229,7 +229,7 @@ class Tree extends Component {
           <div className="tree-diagram">
             <TreeDiagram data={this.state.treeData} />
           </div>
-          <span className="subtitle mt-6">------------------------------------Order of Traversal------------------------------------</span>
+          <span className="subtitle mt-6">----------------------------------ORDER OF TRAVERSAL----------------------------------</span>
           <div className="transition-list">
             <TransitionedList list={this.state.list} />
           </div>
