@@ -7,12 +7,12 @@
 
   width: 256px;
   min-height: calc(100vh - 56px);
-  padding-left: 1rem;
+  padding-left: 25rem;
   display: flex;
   flex-flow: column;
-  overflow: scroll;
+  overflow: hidden;
 
-  background-color: var(--background-color-3);
+  /* background-color: var(--background-color-3); */
   box-shadow: var(--elevation-umbra-4) var(--elevation-umbra-color),
     var(--elevation-penumbra-4) var(--elevation-penumbra-color);
 
@@ -20,13 +20,14 @@
 }
 
 /* ELEMENTS */
-.SortingDrawer__Content {
+/* .SortingDrawer__Content {
   height: 224px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-}
+
+} */
 
 /* MODIFIERS */
 .SortingDrawer_open {

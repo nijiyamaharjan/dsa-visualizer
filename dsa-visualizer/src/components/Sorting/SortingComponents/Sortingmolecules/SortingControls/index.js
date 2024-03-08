@@ -18,7 +18,7 @@ const SortingControls = ({
   return (
     <Fragment>
       <Menu
-        placeholder="Sort Algorithm"
+        placeholder="Sorting Algorithm"
         items={[
           'Bubble Sort',
           'Selection Sort',
@@ -34,7 +34,7 @@ const SortingControls = ({
       />
 
       <div className="SortingControls__Size">
-        <span>Size</span>
+        <span className="text">Size</span>
         <Menu
           placeholder="Array Size"
           items={['5', '10', '25', '50', '75', '100']}
@@ -50,7 +50,7 @@ const SortingControls = ({
         onSwitch={onToggleDarkMode}
         checked={darkMode}
       /> */}
-    </Fragment>
+    </Fragment >
   );
 };
 

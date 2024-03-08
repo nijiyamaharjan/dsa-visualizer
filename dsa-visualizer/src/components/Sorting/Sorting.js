@@ -83,7 +83,6 @@ class Sorting extends Component {
         'Heap Sort': HeapSortDesc,
         'Shell Sort': ShellSortDesc
     };
-
     componentDidMount() {
         this.generateRandomArray();
     }
@@ -174,14 +173,14 @@ class Sorting extends Component {
                     {controls}
                 </SortingDrawer>
 
-                <main className="Sorting__Body">
+                <div className="Sorting__Body">
                     <SortVisualizer
                         array={this.state.array}
                         trace={this.state.trace}
                         colorKey={colorKey}
-                        desc={desc}
+                    //desc={desc}
                     />
-                </main>
+                </div>
 
             </div>
         );

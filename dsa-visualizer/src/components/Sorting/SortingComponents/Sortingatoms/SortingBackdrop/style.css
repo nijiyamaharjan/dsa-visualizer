@@ -15,9 +15,11 @@
   opacity: 0.8;
   backdrop-filter: saturate(0.2) blur(5px);
 }
+
 .Backdrop_dark {
   background-color: black;
 }
+
 .Backdrop_clickable {
   cursor: pointer;
 }

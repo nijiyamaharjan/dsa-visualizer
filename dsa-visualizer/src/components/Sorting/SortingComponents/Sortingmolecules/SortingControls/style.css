@@ -2,4 +2,10 @@
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
+  background-color: var(--white);
+  color: pink;
+}
+
+.text {
+  color: pink;
 }

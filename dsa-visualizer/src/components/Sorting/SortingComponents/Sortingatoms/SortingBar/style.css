@@ -1,6 +1,8 @@
 .Bar {
+  /* background-color: var(--white); */
   background-color: var(--white);
-  color: var(--text-color-dark);
+  /* color: var(--text-color-dark); */
+  color: black;
   display: flex;
   flex-direction: column reverse;
   align-items: flex-end;
@@ -9,6 +11,7 @@
 
 .Bar__Text {
   margin: 0 auto 0.25rem;
+  color: black;
 }
 
 .Bar_sorted {

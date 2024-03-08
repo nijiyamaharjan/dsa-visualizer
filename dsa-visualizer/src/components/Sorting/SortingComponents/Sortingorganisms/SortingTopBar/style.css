@@ -16,8 +16,7 @@
 
   background-color: var(--background-color-3);
   z-index: 105;
-  box-shadow: var(--elevation-umbra-4) var(--elevation-umbra-color),
-    var(--elevation-penumbra-4) var(--elevation-penumbra-color);
+  box-shadow: 0px 11px 22px rgba(0, 0, 0, 0.3);
 
   transition: background-color 500ms ease-in-out;
 }
