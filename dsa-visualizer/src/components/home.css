@@ -10,11 +10,6 @@
     font-size: 1.5rem; 
     margin-bottom: 0.5rem;
   }
-
-
-.card-container:hover {
-    filter: brightness(80%);
-  }
   
 
 .card-container {
@@ -25,3 +20,22 @@
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+
+.card-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.card-image:hover {
+  transform: scale(1.1);
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+

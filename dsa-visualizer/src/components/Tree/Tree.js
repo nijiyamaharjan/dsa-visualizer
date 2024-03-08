@@ -35,12 +35,6 @@ class Tree extends Component {
           value: "Inorder",
           selected: false,
           key: "dropdownOptions"
-        },
-        {
-          id: 3,
-          value: "Levelorder",
-          selected: false,
-          key: "dropdownOptions"
         }
       ],
       treeData: {
@@ -136,8 +130,6 @@ class Tree extends Component {
       this.tree.preorderTraversal();
     } else if (selectedTraversal === "Postorder") {
       this.tree.postorderTraversal();
-    } else {
-      this.tree.levelorderTraversal();
     }
 
     const traversalOrder = this.tree.getTraversalOrder();
