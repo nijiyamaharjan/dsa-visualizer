@@ -21,6 +21,6 @@
 .gradient-container {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(315deg, #7C6BD1,#5171AC, #5FFBF1);
+  background: linear-gradient(250deg,#7fa4e9,#7C6BD1);
   background-size: 200% 200%;
 }

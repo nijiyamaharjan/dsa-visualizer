@@ -1,6 +1,6 @@
 .node circle {
   fill: #f9f7f7;
-  stroke: #112d4e;
+  stroke: #000000;
   r:25;
 }
 
@@ -10,7 +10,7 @@
 
 path.link {
   fill: none;
-  stroke: #112d4e;
+  stroke: #000000;
 }
 
 .traversed-node {
@@ -44,7 +44,7 @@ path.link {
 
 .right-container {
   justify-content: center;
-  background-color: #112d4e;
+  background: #7C6BD1
 }
 
 .tree-diagram,
@@ -55,7 +55,7 @@ path.link {
 }
 
 .traversed-node circle  {
-  fill: #112d4e;
+  fill: #7C6BD1;
   r:25;
 }
 
