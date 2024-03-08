@@ -45,33 +45,8 @@ export class GraphAlgorithm extends Component {
                             </div>
                         </div>
 
-                        <div className="w-full md:w-1/4 mb-4 p-4">
-                            <div className=" w-full max-w-md bg-white bg-opacity-50 rounded-md shadow-xl flex flex-col items-center card-wrapper">
-                                <div className="card-body p-6">
-                                    <h3 className="card-title mb-4 text-lg text-white">
-                                        Kruskal's Minimal Spanning Tree
-                                    </h3>
-                                    <p className="card-text font-serif text-white mb-4">
-                                        A simple simulation Kruskal's Algorithm for finding the Minimal Spanning Tree of a connected undirected weighted graph.
-                                    </p>
-                                    <NavLink to='/KruskalMST' className="p-2 text-white bg-gray-700 hover:bg-black focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Kruskal's MST</NavLink>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-full md:w-1/4 mb-4 p-4">
-                            <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md shadow-xl flex flex-col items-center card-wrapper">
-                                <div className="card-body p-6">
-                                    <h3 className="card-title mb-4 text-lg text-white">
-                                        Prim's Minimal Spanning Tree Algorithm
-                                    </h3>
-                                    <p className="card-text font-serif text-white mb-4">
-                                        A simple simulation Prim's Algorithm for finding the Minimal Spanning Tree of a connected undirected weighted graph.
-                                    </p>
-                                    <NavLink to='/PrimMST' className="p-2 text-white bg-gray-700 hover:bg-black focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Prim's MST</NavLink>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        
 
                     </div>
                 </div>

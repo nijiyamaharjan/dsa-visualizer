@@ -20,9 +20,9 @@ export class Home extends Component {
                             <title>Visualizer</title>
                         </Helmet>
                         <div className="flex mb-4 text-gray-700">
-                            {this.renderCard('DataStructures', 'Stack, Queue, Linked List', '/DataStructures')}
+                            {/* {this.renderCard('DataStructures', 'Stack, Queue, Linked List', '/DataStructures')} */}
                             {this.renderCard('Sorting', 'Bubble Sort, Insertion Sort, Quick Sort', '/Sorting')}
-                            {this.renderCard('Searching', 'Linear Search, Binary Search', '/Searching')}
+                            {/* {this.renderCard('Searching', 'Linear Search, Binary Search', '/Searching')} */}
                             {this.renderCard('Graph', 'Dijkstra, Prim, BFS, DFS', '/GraphAlgorithm')}
                             {this.renderCard('Tree', 'Binary Tree Traversal', '/Tree')}
                         </div>
