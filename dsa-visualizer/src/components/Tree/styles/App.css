@@ -1,6 +1,7 @@
 .node circle {
   fill: #f9f7f7;
   stroke: #112d4e;
+  r:25;
 }
 
 .node text {
@@ -51,6 +52,11 @@ path.link {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.traversed-node circle  {
+  fill: #112d4e;
+  r:25;
 }
 
 .tree-diagram {
