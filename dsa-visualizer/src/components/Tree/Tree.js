@@ -79,15 +79,20 @@ class Tree extends Component {
     };
 
     this.tree = new Treecomp("1");
+
   }
+
+  handleSpeedChange = (speed) => {
+    this.setState({ speed });
+  };
   //This will build the tree data-structure with these static values
   componentDidMount() {
     this.tree.add("2", "left");
     this.tree.add("3", "right");
-    this.tree.add("8", "right","3");
-    this.tree.add("11", "left","3");
-    this.tree.add("9", "right","11");
-    this.tree.add("10", "left","11");
+    this.tree.add("8", "right", "3");
+    this.tree.add("11", "left", "3");
+    this.tree.add("9", "right", "11");
+    this.tree.add("10", "left", "11");
     this.tree.add("4", "left", "2");
     this.tree.add("5", "right", "2");
     this.tree.add("6", "left", "5");
@@ -108,7 +113,7 @@ class Tree extends Component {
         setTimeout(() => {
           this.displayList(index + 1);
           this.animateTree(this.state.traversalOrder[index + 1]);
-        }, 1500);
+        }, this.state.speed); // Use state speed here
       });
     }
   };
@@ -217,19 +222,25 @@ class Tree extends Component {
       () => {
         setTimeout(() => {
           this.updateTraversalOrder();
-        }, 1000);
+        }, 2000);
       }
     );
   };
+
 
   render() {
     return (
       <div className="app">
         <section className="left-container">
+        <div className="speed-controls mt-10 flex gap-5 ">
+            <button className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" onClick={() => this.handleSpeedChange(2000)}>Slow</button>
+            <button className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" onClick={() => this.handleSpeedChange(1000)}>Medium</button>
+            <button className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" onClick={() => this.handleSpeedChange(750)}>Fast</button>
+          </div>
           <div className="tree-diagram">
             <TreeDiagram data={this.state.treeData} />
           </div>
-          <span className="subtitle mt-6">----------------------------------ORDER OF TRAVERSAL----------------------------------</span>
+          <span className="subtitle">----------------------------------ORDER OF TRAVERSAL----------------------------------</span>
           <div className="transition-list">
             <TransitionedList list={this.state.list} />
           </div>
@@ -245,10 +256,12 @@ class Tree extends Component {
           <div className="traversal-info">
             <TraversalInfo selectedTraversal={this.state.selectedTraversal} />
           </div>
+
         </section>
       </div>
     );
   }
 }
+
 
 export default Tree;

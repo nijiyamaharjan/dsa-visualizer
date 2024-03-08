@@ -7,12 +7,12 @@ const TreeDiagram = props => {
     <div>
       <Tree
         data={props.data}
-        height={500}
-        width={500}
+        height={450}
+        width={450}
         nodeShape="circle"
         svgProps={{
           transform: "rotate(90)",
-          viewBox: "-100 -1 500 500",
+          viewBox: "-50 -1 500 500",
         }}
         textProps={{
           transform: "rotate(-90)",

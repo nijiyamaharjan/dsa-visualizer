@@ -19,7 +19,7 @@ export default class Dropdown extends React.Component {
     const { options } = this.props;
     const { selectedOption } = this.state;
     return (
-      <div className="flex gap-4 mt-50">
+      <div className="flex gap-4">
         {options.map(option => (
           <button
             key={option.value}
