@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900);
 
+
 .example-appear {
     opacity: 0.01;
   }
@@ -24,6 +25,14 @@
     cursor: pointer;
     border-radius: 4px;
 }
+
+input {
+  border: none;
+  text-align: center;
+  font-style: normal;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .txt{
 	height: 26px;
 	width: 200px;
@@ -98,10 +107,15 @@ rect {
   border-radius: 0.25rem;
   transition: background-color 0.3s ease; /* Add transition for smoother effect */
   cursor: pointer;
-  background-color: black;
+  background-color: white;
+  color: black;
 }
 
 .button4:hover {
-  background-color: #4CAF50; /* Adjust the hover background color as needed */
-  color: white; /* Adjust the hover text color as needed */
+  background-color: #d9d9d9; /* Adjust the hover background color as needed */
+/* Adjust the hover text color as needed */
+}
+
+.bg {
+  background-color: #7D75D6;
 }
