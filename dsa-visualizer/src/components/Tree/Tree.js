@@ -223,7 +223,7 @@ class Tree extends Component {
       () => {
         setTimeout(() => {
           this.updateTraversalOrder();
-        }, 2000);
+        }, 2500);
       }
     );
   };
@@ -233,15 +233,16 @@ class Tree extends Component {
     return (
       <div className="app">
         <section className="left-container">
-        <div className="speed-controls mt-10 flex gap-5 ">
+        
+          <div className="tree-diagram">
+            <TreeDiagram data={this.state.treeData} />
+          </div>
+          <div className="speed-controls mt-10 ml-10 flex gap-5 ">
             <button className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" onClick={() => this.handleSpeedChange(1000)}>Slow</button>
             <button className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" onClick={() => this.handleSpeedChange(500)}>Medium</button>
             <button className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" onClick={() => this.handleSpeedChange(250)}>Fast</button>
           </div>
-          <div className="tree-diagram">
-            <TreeDiagram data={this.state.treeData} />
-          </div>
-          <span className="subtitle">----------------------------------ORDER OF TRAVERSAL----------------------------------</span>
+          <span className="subtitle">-------------------------------------ORDER OF TRAVERSAL-------------------------------</span>
           <div className="transition-list">
             <TransitionedList list={this.state.list} />
           </div>
