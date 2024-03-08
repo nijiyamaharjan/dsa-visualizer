@@ -27,7 +27,7 @@
 }
 
 input {
-  border: 2px solid black;
+  border: none;
   text-align: center;
   font-style: normal;
   font-family: 'Courier New', Courier, monospace;
