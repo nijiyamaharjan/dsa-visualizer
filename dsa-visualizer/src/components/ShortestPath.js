@@ -387,24 +387,23 @@ export class ShortestPath extends Component {
         })
         
         return (
-        <div>
+        <div className='bg'>
             <Helmet>
             <title>Dijkstra's Algorithm</title>
       </Helmet>
             <center>
-            <h3>Dijkstra's Shortest Path Algorithm</h3>
             <button className="button button4" onClick={()=>this.dijkstra(this.state.src)}>Dijkstra's Algorithm</button>
 
-            <button className="button button4" onClick={()=>this.randomWeights()}>Randomize edge weights</button>
+            <button className="button button4" onClick={()=>this.randomWeights()}>Randomize Edge Weights</button>
             <button className="button button4" onClick={()=>this.reset()}>Reset</button>
             <button className="button button4" onClick={()=>this.clear()}>Clear Canvas</button>
-            <text style={{fontFamily:'Georgia'}}>&nbsp;&nbsp;&nbsp;Source/Starting vertex&nbsp;</text>
+            <text style={{fontFamily:'Georgia'}}>&nbsp;&nbsp;&nbsp;Source/Starting Vertex&nbsp;&nbsp;</text>
             <input type="text" id="src" value={this.state.src} style={{width:'25px'}} onChange={(e)=>this.changeSrc(e)} />
             </center>
             <center>
-            <svg paintOrder='markers' ref='svg' width={window.innerWidth*.995} height={window.innerHeight*.88} style={{border:'2px solid black',backgroundColor:'#dddddd',cursor:'crosshair'}} onClick={(event)=>this.getMousePosition(event)} >
+            <svg paintOrder='markers' ref='svg' width={window.innerWidth*.998} height={window.innerHeight*.94} style={{backgroundColor:'#BEBEEC',cursor:'crosshair'}} onClick={(event)=>this.getMousePosition(event)} >
             {
-                window.location.href==='http://localhost:3000/dijkstra'?<rect><title>1.Click to plot some points.&#13;2.Connect two points by clicking on them consecutively.&#13;3.Run the algorithm. &#13;4.Hover on any vertex to see the shortest path from the root vertex.</title></rect> : <rect><title>1.Click to plot some points.&#13;2.Connect two points by clicking on them consecutively.&#13;3.Run the algo and Enjoy!!!</title></rect>
+                <rect><title>1.Click to plot some points.&#13;2.Connect two points by clicking on them consecutively.&#13;3.Run the algorithm. &#13;4.Hover on any vertex to see the shortest path from the root vertex.</title></rect>
             }
             {dists}
             {edgeWeights}

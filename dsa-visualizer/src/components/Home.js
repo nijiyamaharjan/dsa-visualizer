@@ -23,14 +23,14 @@ export class Home extends Component {
                             {/* {this.renderCard('DataStructures', 'Stack, Queue, Linked List', '/DataStructures', 'https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')} */}
                             {this.renderCard('Sorting', 'Bubble/Insertion/Quick', '/Sorting','https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')}
                            
-                            {this.renderCard('Graph', 'Dijkstra, Prim, BFS, DFS', '/GraphAlgorithm','https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')}
+                            {this.renderCard('Graph', 'Dijkstra, BFS, DFS', '/GraphAlgorithm','https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')}
                             {this.renderCard('Tree', 'Binary Tree Traversal', '/Tree','https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')}
                         </div>
                     </div>
                 </div>
                 <div className="text-center py-7">
                     <p className="text-gray-700">
-                        The application is aimed to help the users better understand various data structures and algorithms.
+                        The application is aimed to help the users better understand various algorithms.
                     </p>
                 </div>
             </div>
