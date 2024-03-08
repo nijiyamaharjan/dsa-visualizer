@@ -182,7 +182,7 @@ export class ShortestPath extends Component {
     }
 
     showPath(s){
-        if(window.location.href==='http://localhost:3000/PrimMST') return
+        
         if(done===false)
         return
         let i=parent[s]
@@ -200,7 +200,7 @@ export class ShortestPath extends Component {
     }
 
     removePath(s){
-        if(window.location.href==='http://localhost:3000/PrimMST') return
+       
         if(done===false)
         return
         let i=parent[s]
@@ -359,161 +359,6 @@ export class ShortestPath extends Component {
         done=true
     }
     
-    //PRIM'S ALGORITHM
-    minDist(dist,sptSet) 
-    {
-        // Initialize min value 
-        let min = INT_MAX, min_index; 
-        for (let v = 0; v < this.state.points.length; v++) 
-            if (sptSet[v] === false && dist[v] <= min) 
-            {
-                min = dist[v]
-                min_index = v;
-            }
-        return min_index;
-    }
-    primAnimations(s){
-        this.reset()
-        let ar=[]
-        for(let i=0;i<this.state.points.length;i++)
-        {
-            ar.push([])
-            for(let j=0;j<this.state.points.length;j++)
-            ar[i].push(0)
-        }
-        //forming adj matrix
-        for(let i=0;i<this.state.edges.length;i++)
-        {
-            ar[this.state.edges[i].u][this.state.edges[i].v]=({wt:weights[i],edgeNo:i})
-            ar[this.state.edges[i].v][this.state.edges[i].u]=({wt:weights[i],edgeNo:i})
-        }
-        let vis=[]
-        for(let i=0;i<this.state.points.length;i++)
-        vis[i]=false;
-        let animations=[]
-        let dist=[]
-        parent=[]
-        for(let i=0;i<this.state.points.length;i++)
-        dist[i]=100000
-        dist[s]=0
-        parent[s]={vertex:-1,edgeNo:-1}
-        animations.push({
-            x:s,
-            y:0,
-            color:'setdist'
-        })
-        for(let it=0;it<this.state.points.length;it++)
-        {
-            let u=this.minDist(dist,vis)
-            if(dist[u]===INT_MAX)
-            return [];
-            vis[u]=true
-            animations.push({
-                x:u,
-                y:parent[u].edgeNo,
-                color:'confirmdist'
-            })
-            for(let v=0;v<this.state.points.length;v++)
-            {
-                if(!vis[v] && ar[u][v].wt && ar[u][v].wt<dist[v])
-                {
-                    parent[v]={vertex:u,edgeNo:ar[u][v].edgeNo}
-                    dist[v]=ar[u][v].wt
-                    animations.push({
-                        x:ar[u][v].edgeNo,
-                        y:-1,
-                        color:'edge'
-                    })
-                    animations.push({
-                        x:ar[u][v].edgeNo,
-                        y:-1,
-                        color:'shrinkEdge'
-                    })
-                    animations.push({
-                        x:v,
-                        y:dist[v],
-                        color:'setdist'
-                    })
-                }
-            }
-        }
-        
-        return animations
-    }
-
-    prim(s){
-        if(s>=this.state.points.length)
-        return
-        if(s==="" && s!=='0')
-        {
-            alert("Enter a source vertex")
-            return
-        }
-        for(let i=0;i<s.length;i++)
-        {
-            if(s[i]!=='0' && s[i]!=='1' && s[i]!=='2' && s[i]!=='3' && s[i]!=='4' && s[i]!=='5' && s[i]!=='6' && s[i]!=='7' && s[i]!=='8' && s[i]!=='9')
-            {
-                alert("Enter an integer as source vertex")
-                return
-            }
-        }
-        s=parseInt(s)
-        const animations=this.primAnimations(s)
-        let len=animations.length
-        if(len===0) return
-        for(let i=0;i<len;i++)
-        {
-            if(animations[i].color==='edge'){
-                let tm=setTimeout(() => {
-                    let q=document.getElementById(`edge${animations[i].x}`)
-                    q.style.stroke='blue'
-                    q.style.strokeWidth='5'
-                    }, i*delay);
-                timeouts.push(tm)
-            }
-            else if(animations[i].color==='shrinkEdge')
-            {
-                let tm=setTimeout(() => {
-                    let q=document.getElementById(`edge${animations[i].x}`)
-                    q.style.stroke='blue'
-                    q.style.strokeWidth='2'
-                    }, i*delay);
-                timeouts.push(tm)
-            }
-            else if(animations[i].color==='setdist')
-            {
-                let tm=setTimeout(() => {
-                    let q=document.getElementById(`point${animations[i].x}`)
-                    q.style.fill='blue'
-                    q=document.getElementById(`dist${animations[i].x}`);
-                    q.textContent=animations[i].y
-                    
-                }, i*delay);
-                timeouts.push(tm);
-            }
-            else
-            {
-                let tm=setTimeout(() => {
-                    let q=document.getElementById(`point${animations[i].x}`)
-                    q.style.fill=color1
-                    if(animations[i].y!=-1) document.getElementById(`edge${animations[i].y}`).style.stroke=color1
-                }, i*delay);
-                timeouts.push(tm)
-            }
-        }
-        let tm=setTimeout(() => {
-            for(let i=0;i<this.state.edges.length;i++)
-            {
-                if(document.getElementById(`edge${i}`).style.stroke!==color1)
-                {
-                    document.getElementById(`edge${i}`).style.stroke='#bfbfbf'
-                    document.getElementById(`weight${i}`).style.fill='#bfbfbf'
-                }
-            }
-        }, len*delay);
-        timeouts.push(tm)
-    }
-
     render() {
         var pts=this.state.points.map((x,idx)=>{
             return(
@@ -544,11 +389,11 @@ export class ShortestPath extends Component {
         return (
         <div>
             <Helmet>
-            {window.location.href==='http://localhost:3000/dijkstra'?<title>Dijkstra's Algorithm</title>:<title>Prim's Algorithm</title>}
+            <title>Dijkstra's Algorithm</title>
       </Helmet>
             <center>
-            {window.location.href==='http://localhost:3000/dijkstra'?<h3>Dijkstra's Shortest Path Algorithm</h3>:<h3>Prim's Minimal Spanning Tree Algorithm</h3>}
-            {window.location.href==='http://localhost:3000/dijkstra'?<button className="button button4" onClick={()=>this.dijkstra(this.state.src)}>Dijkstra's Algorithm</button> : <button className="button button4" onClick={()=>this.prim(this.state.src)}>Prim's Algorithm</button>}
+            <h3>Dijkstra's Shortest Path Algorithm</h3>
+            <button className="button button4" onClick={()=>this.dijkstra(this.state.src)}>Dijkstra's Algorithm</button>
 
             <button className="button button4" onClick={()=>this.randomWeights()}>Randomize edge weights</button>
             <button className="button button4" onClick={()=>this.reset()}>Reset</button>

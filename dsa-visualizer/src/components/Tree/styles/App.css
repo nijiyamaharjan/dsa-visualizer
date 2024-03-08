@@ -1,6 +1,7 @@
 .node circle {
   fill: #f9f7f7;
-  stroke: #112d4e;
+  stroke: #000000;
+  r:25;
 }
 
 .node text {
@@ -9,7 +10,7 @@
 
 path.link {
   fill: none;
-  stroke: #112d4e;
+  stroke: #000000;
 }
 
 .traversed-node {
@@ -43,7 +44,7 @@ path.link {
 
 .right-container {
   justify-content: center;
-  background-color: #112d4e;
+  background: #7C6BD1
 }
 
 .tree-diagram,
@@ -51,6 +52,11 @@ path.link {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.traversed-node circle  {
+  fill: #7C6BD1;
+  r:25;
 }
 
 .tree-diagram {
@@ -63,10 +69,11 @@ path.link {
 
 .subtitle {
   font-size: 20px;
-  color: #112d4e;
+  color: grey;
   width: 100%;
   text-align: center;
   padding: 5% 0;
+  font-weight:bold;
 }
 
 .dropdown {

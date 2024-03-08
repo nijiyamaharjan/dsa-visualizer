@@ -7,19 +7,18 @@ const TreeDiagram = props => {
     <div>
       <Tree
         data={props.data}
-        height={550}
-        width={450}
-        nodeShape='circle'
+        height={500}
+        width={500}
+        nodeShape="circle"
         svgProps={{
           transform: "rotate(90)",
-          viewBox: "-50 -10 400 400"
+          viewBox: "-100 -1 500 500",
         }}
         textProps={{
           transform: "rotate(-90)",
-          x: "-20",
+          x: "-10",
           y: "2"
         }}
-        nodeSize={{ x: 40, y: 40 }} // increase the radius of the circle
       />
     </div>
   );
