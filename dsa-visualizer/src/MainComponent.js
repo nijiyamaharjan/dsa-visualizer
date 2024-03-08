@@ -8,9 +8,9 @@ import Sorting from './components/Sorting/Sorting';
 import DataStructures from './components/DataStructures';
 import Searching from './components/Searching';
 import GraphAlgorithm from './components/GraphAlgorithm';
-import Tree from './components/Tree';
 import Home from './components/Home';
 import LandingPage from './components/LandingPage';
+import Tree from './components/Tree/Tree';
 
 
 function MainComponent() {
