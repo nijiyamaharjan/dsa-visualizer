@@ -10,11 +10,6 @@
     font-size: 1.5rem; 
     margin-bottom: 0.5rem;
   }
-
-
-.card-container:hover {
-    filter: brightness(80%);
-  }
   
 
 .card-container {
