@@ -17,29 +17,35 @@ const SortingControls = ({
 }) => {
   return (
     <Fragment>
-      <Menu
-        placeholder="Sort Algorithm"
-        items={[
-          'Bubble Sort',
-          'Selection Sort',
-          'Insertion Sort',
-          'Merge Sort',
-          'Quick Sort',
-          'Quick Sort 3',
-          'Heap Sort',
-          'Shell Sort'
-        ]}
-        selected={algorithm}
-        onSelect={onAlgorithmChange}
-      />
+
+      <div className="menu">
+
+        <Menu
+          placeholder="Sorting Algorithm"
+          items={[
+            'Bubble Sort',
+            'Selection Sort',
+            'Insertion Sort',
+            'Merge Sort',
+            'Quick Sort',
+            'Quick Sort 3',
+            'Heap Sort',
+            'Shell Sort'
+          ]}
+          selected={algorithm}
+          onSelect={onAlgorithmChange}
+        />
+      </div>
+
 
       <div className="SortingControls__Size">
-        <span>Size</span>
+        <span className="text">Size</span>
         <Menu
           placeholder="Array Size"
           items={['5', '10', '25', '50', '75', '100']}
           selected={String(arraySize)}
           onSelect={onArraySizeChange}
+
         />
       </div>
 
@@ -50,7 +56,7 @@ const SortingControls = ({
         onSwitch={onToggleDarkMode}
         checked={darkMode}
       /> */}
-    </Fragment>
+    </Fragment >
   );
 };
 

@@ -158,6 +158,7 @@ class SortVisualizer extends Component {
   render() {
     return (
       <div className="SortVisualizer">
+
         <SortChart
           numbers={this.state.array}
           maxNum={Math.max(...this.state.array)}
@@ -167,6 +168,8 @@ class SortVisualizer extends Component {
           groupD={this.state.groupD}
           sortedIndices={this.state.sortedIndices}
         />
+
+
 
         <div className="SortVisualizer__ProgressBar">
           <ProgressBar
@@ -207,7 +210,7 @@ class SortVisualizer extends Component {
 
         <ColorKey {...this.props.colorKey} />
 
-        <SortInfo {...this.props.desc} />
+        {/* <SortInfo {...this.props.desc} /> */}
       </div>
     );
   }
