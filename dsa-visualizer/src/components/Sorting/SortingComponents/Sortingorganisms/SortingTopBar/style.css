@@ -51,8 +51,7 @@
   flex: 1 1 auto;
   align-items: center;
   min-width: 0;
-  padding: var(--top-bar-section-vertical-padding)
-    var(--top-bar-section-vertical-padding);
+  padding: var(--top-bar-section-vertical-padding) var(--top-bar-section-vertical-padding);
   z-index: 1;
 }
 

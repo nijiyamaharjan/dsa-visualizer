@@ -4,27 +4,27 @@ import './searching.css'
 
 class Searching extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-          randomArray: [],
-          randomSortedArray: [],
-          searchType: 'linear',
-          elementToSearch: '',
-          boxesContent: []
-        };
+  constructor(props) {
+    super(props);
+    this.state = {
+      randomArray: [],
+      randomSortedArray: [],
+      searchType: 'linear',
+      elementToSearch: '',
+      boxesContent: []
+    };
 
-        this.binarySearchRef = React.createRef();
-        this.linearSearchRef = React.createRef();
-        this.searchRef = React.createRef();
-        this.generateArrayRef = React.createRef();
-      }
-    
-      successColor = "#32E0C4";
-      failureColor = "#FB3640";
-      
-    
-      
+    this.binarySearchRef = React.createRef();
+    this.linearSearchRef = React.createRef();
+    this.searchRef = React.createRef();
+    this.generateArrayRef = React.createRef();
+  }
+
+  successColor = "#32E0C4";
+  failureColor = "#FB3640";
+
+
+
   generateArray = () => {
     const resultArray = [];
     for (let i = 0; i < 10; i++) {
@@ -38,19 +38,19 @@ class Searching extends Component {
     const { searchType } = this.state;
     const randomArray = this.generateArray();
     const randomSortedArray = [...randomArray].sort((a, b) => a - b);
-  
+
     const boxesContent = searchType === "linear" ? randomArray : randomSortedArray;
     this.setState({ randomArray, randomSortedArray, boxesContent });
   };
 
   disable = () => {
     if (this.binarySearchRef.current && this.linearSearchRef.current && this.searchRef.current && this.generateArrayRef.current) {
-        this.binarySearchRef.current.setAttribute("disabled", true);
-        this.linearSearchRef.current.setAttribute("disabled", true);
-        this.searchRef.current.setAttribute("disabled", true);
-        this.generateArrayRef.current.setAttribute("disabled", true);
+      this.binarySearchRef.current.setAttribute("disabled", true);
+      this.linearSearchRef.current.setAttribute("disabled", true);
+      this.searchRef.current.setAttribute("disabled", true);
+      this.generateArrayRef.current.setAttribute("disabled", true);
     } else {
-        setTimeout(this.disable, 100); // Retry after 100 milliseconds
+      setTimeout(this.disable, 100); // Retry after 100 milliseconds
     }
   };
 
@@ -86,12 +86,12 @@ class Searching extends Component {
     let counter = 0;
     const timer = setInterval(() => {
       let box = `box-wrapper-${counter}`;
-  console.log(arr[counter]);
+      console.log(arr[counter]);
       if (counter !== 0) {
         // hiding arrow
         // Example: document.getElementById(box).style.display = "none";
       }
-  
+
       if (counter === arr.length) {
         alert("Element Not Found");
         clearInterval(timer);
@@ -102,7 +102,7 @@ class Searching extends Component {
           // Example: document.getElementById(box).style.backgroundColor = this.failureColor;
         }, 100);
       }
-  
+
       if (arr[counter] === value) {
         clearInterval(innerTimer);
         alert("Element Found At Index " + counter);
@@ -113,32 +113,32 @@ class Searching extends Component {
   };
 
   binarySearch = (arr, x, start, end) => {
-    
+
     if (start > end) {
       alert("Element not Found");
       return false;
     }
-    else{
-        var innerTimer = setTimeout(() => {
-            // Example: document.getElementById(box).style.backgroundColor = this.failureColor;
-          }, 500);
+    else {
+      var innerTimer = setTimeout(() => {
+        // Example: document.getElementById(box).style.backgroundColor = this.failureColor;
+      }, 500);
     }
-  
+
     let mid = Math.floor((start + end) / 2);
     console.log(arr[mid]);
     let previousMid = mid;
     let box = `box-wrapper-${mid}`;
-  
+
     // displaying arrow and color
     // Example: document.getElementById(box).style.display = "block";
     // Example: setTimeout(() => { document.getElementById(box).style.backgroundColor = this.failureColor; }, 500);
-  
+
     if (arr[mid] === x) {
       // Example: document.getElementById(box).style.backgroundColor = this.successColor;
       alert("Element Found At Index " + mid);
       return true;
     }
-  
+
     if (arr[mid] > x) {
       // Example: document.getElementById(box).style.display = "none";
       return this.binarySearch(arr, x, start, mid - 1);
@@ -204,15 +204,15 @@ class Searching extends Component {
                       </div>
                       {/* For element to be searched */}
                       <div className="search-element">
-                      <input
-                        type="text"
-                        placeholder="Enter element to search"
-                        id="valueForSearch"
-                        value={this.state.elementToSearch}
-                        onChange={(e) => this.setState({ elementToSearch: e.target.value })}
-                        required="required"
-                        autoComplete="off"
-                        style={{ color: 'blue' }}
+                        <input
+                          type="text"
+                          placeholder="Enter element to search"
+                          id="valueForSearch"
+                          value={this.state.elementToSearch}
+                          onChange={(e) => this.setState({ elementToSearch: e.target.value })}
+                          required="required"
+                          autoComplete="off"
+                          style={{ color: 'blue' }}
                         />
                       </div>
                       {/* For search to start */}
