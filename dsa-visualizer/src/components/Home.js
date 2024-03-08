@@ -28,11 +28,7 @@ export class Home extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="text-center py-7">
-                    <p className="text-gray-700">
-                        The application is aimed to help the users better understand various algorithms.
-                    </p>
-                </div>
+
             </div>
         );
     }

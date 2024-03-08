@@ -119,3 +119,7 @@ rect {
 .bg {
   background-color: #7D75D6;
 }
+
+.header {
+  padding-top: 10px;
+}
