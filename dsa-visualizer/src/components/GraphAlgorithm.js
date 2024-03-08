@@ -21,11 +21,11 @@ export class GraphAlgorithm extends Component {
                             <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md shadow-xl flex flex-col items-center card-wrapper">
                                 <div className="card-body p-6">
                                     <h3 className="card-title mb-4 text-lg text-white">
-                                        Breadth First and Depth First Algorithms
+                                        Breadth First and Depth First
                                     </h3>
-                                    <p className="card-text font-serif text-white mb-4">
-                                        A simple simulation of Breadth First Traversal and Depth First traversal on an undirected graph created by the user.
-                                    </p>
+                                    <img src="https://visualgo.net/img/gif/dfsbfs.gif"></img><br></br>
+
+                                    
                                     <NavLink to='/bfsdfs' className="p-2 text-white bg-gray-700 hover:bg-black focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">BFS and DFS</NavLink>
                                 </div>
                             </div>
@@ -37,9 +37,8 @@ export class GraphAlgorithm extends Component {
                                     <h3 className="card-title mb-4 text-lg text-white">
                                         Dijkstra's Shortest Path Algorithm
                                     </h3>
-                                    <p className="card-text font-serif text-white mb-4">
-                                        A simulation of Djikstra's Shortest Path Algorithm and finding the shortest paths from the chosen source vertex to all the nodes.
-                                    </p>
+                                
+                                    <img src="https://visualgo.net/img/gif/sssp.gif"></img><br></br>
                                     <NavLink to='/dijkstra' className="p-2 text-white bg-gray-700 hover:bg-black focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Dijkstra's Algorithm</NavLink>
                                 </div>
                             </div>
