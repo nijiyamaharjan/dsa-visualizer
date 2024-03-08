@@ -229,7 +229,7 @@ class Tree extends Component {
           <div className="tree-diagram">
             <TreeDiagram data={this.state.treeData} />
           </div>
-          <span className="subtitle">Order of Traversal</span>
+          <span className="subtitle mt-6">------------------------------------Order of Traversal------------------------------------</span>
           <div className="transition-list">
             <TransitionedList list={this.state.list} />
           </div>
