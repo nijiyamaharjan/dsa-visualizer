@@ -69,10 +69,11 @@ path.link {
 
 .subtitle {
   font-size: 20px;
-  color: #112d4e;
+  color: grey;
   width: 100%;
   text-align: center;
   padding: 5% 0;
+  font-weight:bold;
 }
 
 .dropdown {
