@@ -12,7 +12,7 @@ export class Home extends Component {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center gradient-container">
                 <h1 className="text-4xl font-bold text-gray-700 mb-20 mt-10">
-                    DATA STRUCTURES AND ALGORITHMS VISUALIZER
+                    ALGORITHMS VISUALIZER
                 </h1>
                 <div className="flex items-center justify-center">
                     <div>
@@ -21,7 +21,7 @@ export class Home extends Component {
                         </Helmet>
                         <div className="flex justify-center items-center mb-4 text-gray-700">
                             {/* {this.renderCard('DataStructures', 'Stack, Queue, Linked List', '/DataStructures', 'https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')} */}
-                            {this.renderCard('Sorting', 'Bubble/Insertion/Quick', '/Sorting','https://visualgo.net/img/gif/sorting.gif')}
+                            {this.renderCard('Sorting', 'Bubble, Insertion, Quick', '/Sorting','https://visualgo.net/img/gif/sorting.gif')}
                            
                             {this.renderCard('Graph', 'Dijkstra, BFS, DFS', '/GraphAlgorithm','https://visualgo.net/img/gif/graphds.gif')}
                             {this.renderCard('Tree', 'Binary Tree Traversal', '/Tree','https://visualgo.net/img/gif/heap.gif')}
