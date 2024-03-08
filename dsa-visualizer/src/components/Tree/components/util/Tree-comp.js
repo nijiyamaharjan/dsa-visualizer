@@ -25,14 +25,14 @@ function Treecomp(rootNode) {
     if (targetNode === null) {
       this.root[dir] = newNode;
     } else {
-      const position = this.levelorderTraversal(targetNode); //returns the position of the targetNode
+      const position = this.Traversal(targetNode); //returns the position of the targetNode
       position[dir] = newNode;
     }
   };
 
   /*performs level order traversal. If given any node as an argument then return that node's position else
   updates the sequence of the visited nodes*/
-  this.levelorderTraversal = function(searchNode = -1) {
+  this.Traversal = function(searchNode = -1) {
     const queue = [];
     let currentNode = this.root;
     queue.push(currentNode);

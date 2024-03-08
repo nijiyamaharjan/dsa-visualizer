@@ -17,31 +17,45 @@ class Tree extends Component {
       selectedTraversal: "Select Traversal",
       traversalOrder: [], //it stores the expected sequence of node from tree structure
       list: [], //store the nodes which got displayed on list/hightlighted on tree one by one
-      dropdownOptions: [
+      buttonOptions: [
         {
           id: 0,
           value: "Postorder",
           selected: false,
-          key: "dropdownOptions"
+          key: "buttonOptions"
         },
         {
           id: 1,
           value: "Preorder",
           selected: false,
-          key: "dropdownOptions"
+          key: "buttonOptions"
         },
         {
           id: 2,
           value: "Inorder",
           selected: false,
-          key: "dropdownOptions"
+          key: "buttonOptions"
         }
       ],
       treeData: {
         name: "1",
         children: [
           {
-            name: "3"
+            name: "3",
+            children: [
+              {
+                name: "8"
+              },
+              {
+                name: "11",
+                children: [
+                  {
+                    name: "9"
+                  },
+                  { name: "10" }
+                ]
+              }
+            ]
           },
           {
             name: "2",
@@ -70,13 +84,17 @@ class Tree extends Component {
   componentDidMount() {
     this.tree.add("2", "left");
     this.tree.add("3", "right");
+    this.tree.add("8", "right","3");
+    this.tree.add("11", "left","3");
+    this.tree.add("9", "right","11");
+    this.tree.add("10", "left","11");
     this.tree.add("4", "left", "2");
     this.tree.add("5", "right", "2");
     this.tree.add("6", "left", "5");
     this.tree.add("7", "right", "5");
   }
 
-  /*This menthod will display order of traversal one by one in delayed manner the "if condition" makes sure that
+  /*This method will display order of traversal one by one in delayed manner the "if condition" makes sure that
   if user interrupts the traversal and selectes the new one before the old one gets completed the effect of old traversal
   completely nullifies before new gets started*/
 
@@ -160,7 +178,21 @@ class Tree extends Component {
           name: "1",
           children: [
             {
-              name: "3"
+              name: "3",
+              children: [
+                {
+                  name: "8"
+                },
+                {
+                  name: "11",
+                  children: [
+                    {
+                      name: "9"
+                    },
+                    { name: "10" }
+                  ]
+                }
+              ]
             },
             {
               name: "2",
@@ -203,11 +235,11 @@ class Tree extends Component {
           </div>
         </section>
         <section className="right-container">
-          <div className="dropdown">
+          <div className="Dropdown">
             <Dropdown
               title={this.state.selectedTraversal}
               handleTraversalChange={this.handleTraversalChange}
-              options={this.state.dropdownOptions}
+              options={this.state.buttonOptions}
             />
           </div>
           <div className="traversal-info">

@@ -7,7 +7,7 @@ const TransitionedList = (props) => {
         return (
           <li
             key={`${listItem}${index}`}
-            className="m-2 w-12 h-12 text-center flex justify-center items-center bg-blue-900 text-white rounded-xl"
+            className="m-2 w-12 h-12 text-center flex justify-center items-center bg-purple-600 text-white rounded-xl"
           >
             {listItem}
           </li>

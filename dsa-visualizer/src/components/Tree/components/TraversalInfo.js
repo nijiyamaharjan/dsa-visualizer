@@ -15,14 +15,14 @@ const TraversalInfo = props => {
   const info = displayInfo(traversal);
 
   return (
-    <div className="glass-morphed-box bg-white bg-opacity-30 backdrop-blur-md text-white h-96 w-full box-border m-5 text-base rounded-md shadow-md flex justify-center items-center">
+    <div className="glass-morphed-box bg-white bg-opacity-30 backdrop-blur-md text-white h-96 w-full box-border m-5 text-l rounded-md shadow-md flex justify-center items-center">
       <div className="text-center">
         {traversal !== "Select Traversal" ? (
-          <span className="info-header text-2xl pb-5 font-bold text-white">{traversal} Traversal</span>
+          <span className="info-header text-3xl pb-15 font-bold text-white">{traversal} Traversal</span>
         ) : (
-          <span className="info-header text-2xl pb-5 font-bold text-white">Choose any traversal</span>
+          <span className="info-header text-3xl pb-5 font-bold text-white">Choose any traversal</span>
         )}
-        <div className="display-linebreak whitespace-pre-line pl-5 leading-17 text-white">{info}</div>
+        <div className="display-linebreak whitespace-pre-line pl-5 mt-10 leading-17 text-white text-lg">{info}</div>
       </div>
     </div>
   );
