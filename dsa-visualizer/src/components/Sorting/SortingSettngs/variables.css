@@ -46,10 +46,10 @@
   --text-color-dark: var(--gray-800);
   --button-disabled-ink-color: rgba(0, 0, 0, 0.37);
 
-  --background-color-1: white;
-  --background-color-2: white;
-  --background-color-3: white;
-  --background-color-4: white;
+  --background-color-1: black;
+  --background-color-2: #243441;
+  --background-color-3: pink;
+  --background-color-4: purple;
 
   --elevation-baseline-color: black;
   --elevation-umbra-opacity: 0.2;

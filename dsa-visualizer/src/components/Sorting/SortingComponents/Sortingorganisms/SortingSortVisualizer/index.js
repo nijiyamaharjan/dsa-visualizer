@@ -207,7 +207,7 @@ class SortVisualizer extends Component {
 
         <ColorKey {...this.props.colorKey} />
 
-        <SortInfo {...this.props.desc} />
+        {/* <SortInfo {...this.props.desc} /> */}
       </div>
     );
   }

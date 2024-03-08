@@ -6,7 +6,7 @@ import SortingControls from '../Sorting/SortingComponents/Sortingmolecules/Sorti
 import TopBar from '../Sorting/SortingComponents/Sortingorganisms/SortingTopBar';
 import SortingDrawer from '../Sorting/SortingComponents/Sortingorganisms/SortingDrawer';
 import SortVisualizer from '../Sorting/SortingComponents/Sortingorganisms/SortingSortVisualizer';
-import Footer from '../Sorting/SortingComponents/Sortingmolecules/SortingFooter';
+
 
 import BubbleSort, {
     BubbleSortKey,
@@ -182,7 +182,7 @@ class Sorting extends Component {
                         desc={desc}
                     />
                 </main>
-                <Footer />
+
             </div>
         );
     }
