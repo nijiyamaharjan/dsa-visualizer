@@ -35,7 +35,7 @@
 }
 
 .Button:active {
-  outline: none;
+  outline: pink;
 }
 
 .Button:hover {
@@ -57,8 +57,7 @@
   vertical-align: top;
 }
 
-.Button__Label {
-}
+.Button__Label {}
 
 /* Modifiers */
 .Button_uppercase {

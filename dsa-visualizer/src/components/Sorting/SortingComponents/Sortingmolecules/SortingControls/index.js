@@ -17,21 +17,26 @@ const SortingControls = ({
 }) => {
   return (
     <Fragment>
-      <Menu
-        placeholder="Sorting Algorithm"
-        items={[
-          'Bubble Sort',
-          'Selection Sort',
-          'Insertion Sort',
-          'Merge Sort',
-          'Quick Sort',
-          'Quick Sort 3',
-          'Heap Sort',
-          'Shell Sort'
-        ]}
-        selected={algorithm}
-        onSelect={onAlgorithmChange}
-      />
+
+      <div className="menu">
+
+        <Menu
+          placeholder="Sorting Algorithm"
+          items={[
+            'Bubble Sort',
+            'Selection Sort',
+            'Insertion Sort',
+            'Merge Sort',
+            'Quick Sort',
+            'Quick Sort 3',
+            'Heap Sort',
+            'Shell Sort'
+          ]}
+          selected={algorithm}
+          onSelect={onAlgorithmChange}
+        />
+      </div>
+
 
       <div className="SortingControls__Size">
         <span className="text">Size</span>
@@ -40,6 +45,7 @@ const SortingControls = ({
           items={['5', '10', '25', '50', '75', '100']}
           selected={String(arraySize)}
           onSelect={onArraySizeChange}
+
         />
       </div>
 

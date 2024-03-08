@@ -14,7 +14,7 @@
     color: var(--text-color);
 
     /* background-color: var(--background-color-1); */
-    background-color: #243441;
+    background-color: #9386D9;
     transition: color 250ms;
     transition: background-color 500ms ease-in-out;
 }
@@ -22,11 +22,11 @@
 .Sorting__Body {
     overflow: hidden;
     /* border-top: 1px solid #202020; */
-    margin-top: 90px;
-    margin-left: 12.5px;
-    margin-right: 12.5px;
+    margin-top: 125px;
+    margin-left: 25px;
+    margin-right: 25px;
     padding-top: 10px;
-    background-color: #243441;
+    background-color: #A2A2E5;
     box-shadow: 0px 11px 22px rgba(0, 0, 0, 0.3);
     width: 98vw;
     border-radius: 10px;
