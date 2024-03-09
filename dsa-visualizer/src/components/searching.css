@@ -60,7 +60,7 @@ input {
 .box {
   position: relative;
   margin-left: 15px;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   font-size: 20px;
   width: 89px;
   height: 68px;
@@ -117,7 +117,9 @@ input {
 }
 
 .linear-btn
-/* .binary-btn { */ {
+
+/* .binary-btn { */
+  {
   border-radius: 0;
   border-bottom: 1px solid white;
 }
@@ -187,6 +189,7 @@ input {
 .new-array {
   padding: 0.2rem 1.7rem;
 }
+
 .generate-array,
 .search-element,
 .search-wrapper {
@@ -197,9 +200,12 @@ input {
   0% {
     background-color: transparent;
   }
+
   50% {
-    background-color: #f8f9fa; /* Highlight color */
+    background-color: #f8f9fa;
+    /* Highlight color */
   }
+
   100% {
     background-color: transparent;
   }
@@ -208,6 +214,7 @@ input {
 .box-highlight {
   animation: highlight 1s ease-in-out infinite;
 }
+
 .show-arrow {
   display: block;
 }

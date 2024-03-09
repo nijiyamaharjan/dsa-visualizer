@@ -1,0 +1,93 @@
+.node circle {
+  fill: #f9f7f7;
+  stroke: #000000;
+  r:25;
+}
+
+.node text {
+  fill: #112d4e;
+}
+
+path.link {
+  fill: none;
+  stroke: #000000;
+}
+
+.traversed-node {
+  fill: #112d4e;
+}
+
+.traversed-node text {
+  fill: #f9f7f7;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Use viewport height */
+  width: 100vw; /* Use viewport width */
+}
+
+.left-container,
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+.left-container {
+  background-color: #dbe2ef;
+}
+
+.right-container {
+  justify-content: center;
+  background: #7C6BD1
+}
+
+.tree-diagram,
+.transition-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.traversed-node circle  {
+  fill: #7C6BD1;
+  r:25;
+}
+
+.tree-diagram {
+  height: 80%;
+}
+
+.transition-list {
+  height: 20%;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: grey;
+  width: 100%;
+  text-align: center;
+  padding: 5% 0;
+  font-weight:bold;
+}
+
+.dropdown {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.traversal-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  width: 100%;
+}

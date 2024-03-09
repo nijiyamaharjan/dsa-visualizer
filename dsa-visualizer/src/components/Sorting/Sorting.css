@@ -3,23 +3,38 @@
 .Sorting {
     --footer-height: 64px;
 
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     min-height: 100vh;
     min-width: 100vw;
-    position: relative;
-    overflow: scroll;
 
-    padding-bottom: var(--footer-height);
+    position: relative;
+    overflow: hidden;
+    /* padding-bottom: var(--footer-height); */
     text-align: center;
     color: var(--text-color);
 
-    background-color: var(--background-color-1);
+    /* background-color: var(--background-color-1); */
+    background-color: #9386D9;
     transition: color 250ms;
     transition: background-color 500ms ease-in-out;
 }
 
 .Sorting__Body {
-    padding-top: 64px;
+    /* overflow: hidden; */
+    /* border-top: 1px solid #202020; */
+    margin-top: 125px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 10px;
+    background-color: white;
+    box-shadow: 0px 11px 22px rgba(0, 0, 0, 0.3);
+    width: 98vw;
+    border-radius: 10px;
+    /* box-shadow: var(--box-shadow-2); */
+    /* padding-top: 20rem;
+    padding-right: 20rem;
+    padding-left: 2.5rem; */
+
 }
 
 .Sorting_modal_open {

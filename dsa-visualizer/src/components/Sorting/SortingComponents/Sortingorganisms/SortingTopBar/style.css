@@ -1,10 +1,11 @@
 .TopBar {
   /* Default Styles */
+
   --top-bar-row-height: 64px;
   --top-bar-title-left-padding: 20px;
   --top-bar-section-vertical-padding: 8px;
   --top-bar-section-horizontal-padding: 12px;
-
+  padding-right: 20px;
   --top-bar-content-display: none;
   --top-bar-mobile-breakpoint: 599px;
 
@@ -12,12 +13,18 @@
   position: fixed;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  min-width: auto;
+  width: 98%;
+
+  /* margin-top: 2.5px; */
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 10px;
+
 
   background-color: var(--background-color-3);
   z-index: 105;
-  box-shadow: var(--elevation-umbra-4) var(--elevation-umbra-color),
-    var(--elevation-penumbra-4) var(--elevation-penumbra-color);
+  /* box-shadow: 0px 11px 22px rgba(0, 0, 0, 0.3); */
 
   transition: background-color 500ms ease-in-out;
 }
@@ -42,7 +49,7 @@
 .TopBar__Row {
   display: flex;
   position: relative;
-  width: 100%;
+  width: 98%;
   height: var(--top-bar-row-height);
 }
 
@@ -51,8 +58,7 @@
   flex: 1 1 auto;
   align-items: center;
   min-width: 0;
-  padding: var(--top-bar-section-vertical-padding)
-    var(--top-bar-section-vertical-padding);
+  padding: var(--top-bar-section-vertical-padding) var(--top-bar-section-vertical-padding);
   z-index: 1;
 }
 

@@ -42,14 +42,15 @@
   --gray-850: rgb(44, 44, 46);
   --gray-900: rgb(28, 28, 30);
 
-  --text-color: var(--gray-800);
-  --text-color-dark: var(--gray-800);
+  --text-color: #111827;
+  /* --text-color-dark: var(--gray-800); */
   --button-disabled-ink-color: rgba(0, 0, 0, 0.37);
 
-  --background-color-1: white;
-  --background-color-2: white;
+  --background-color-1: #7C6BD1;
+  --background-color-2: background-image: linear-gradient(#243441, rgba(0, 0, 0, 0.2));
+  ;
   --background-color-3: white;
-  --background-color-4: white;
+  --background-color-4: var(--gray-400);
 
   --elevation-baseline-color: black;
   --elevation-umbra-opacity: 0.2;
