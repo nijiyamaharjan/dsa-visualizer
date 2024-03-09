@@ -13,7 +13,7 @@ function LandingPage() {
           <div className="w-1/2 pr-4 p-8">
             <h1 className="text-4xl font-bold text-gray-700 mb-4 justify-center items-center">ALGO-VISUALIZER</h1>
             <p className="text-sm text-justify py-2">
-            This app aims to provide a simple yet effective way for users to visualize algorithms, specifically focusing on SORTING, GRAPH and TREE TRAVERSAL. Through interactive animations and step-by-step demonstrations, users can gain a deeper understanding of fundamental computer science concepts. Whether you're a beginner learning the basics or an experienced developer looking to refine your skills, this visualizer offers a valuable tool for exploring and mastering these essential algorithms.
+            This app aims to provide a simple yet effective way for users to visualize algorithms, specifically focusing on SORTING, GRAPH and TREE TRAVERSAL. Through interactive animations and step-by-step demo, users can gain a deeper understanding of fundamental computer science concepts. Whether you're a beginner learning the basics or an experienced developer looking to refine your skills, this visualizer offers a valuable tool for exploring and mastering these essential algorithms.
             </p>
             <div className='flex py-4'>
               <Link to="/home">
