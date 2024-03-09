@@ -56,7 +56,7 @@ export class ShortestPath extends Component {
         this.forceUpdate();
     }
 
-    changeSrc(e){ //handles changes to the source vertex input field
+    changeSrc(e){ //changes source vertex as entered by user
         this.reset()
         done=false
         let x=document.getElementById('src').value
@@ -114,7 +114,7 @@ export class ShortestPath extends Component {
         }
     }
 
-    reset(){//resetd graph visualization
+    reset(){//resets graph visualization
         done=false
         for(let i=0;i<this.state.points.length;i++){
             if(document.getElementById(`point${i}`).style.fill!=='red')
