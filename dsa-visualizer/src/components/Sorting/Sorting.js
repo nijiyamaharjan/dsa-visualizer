@@ -20,26 +20,7 @@ import InsertionSort, {
     InsertionSortKey,
     InsertionSortDesc
 } from '../Sorting/SortingAlgorithms/InsertionSort';
-import MergeSort, {
-    MergeSortKey,
-    MergeSortDesc
-} from '../Sorting/SortingAlgorithms/MergeSort';
-import QuickSort, {
-    QuickSortKey,
-    QuickSortDesc
-} from '../Sorting/SortingAlgorithms/QuickSort';
-import QuickSort3, {
-    QuickSort3Key,
-    QuickSort3Desc
-} from '../Sorting/SortingAlgorithms/QuickSort3';
-import HeapSort, {
-    HeapSortKey,
-    HeapSortDesc
-} from '../Sorting/SortingAlgorithms/HeapSort';
-import ShellSort, {
-    ShellSortKey,
-    ShellSortDesc
-} from '../Sorting/SortingAlgorithms/ShellSort';
+
 
 class Sorting extends Component {
     state = {
@@ -55,33 +36,21 @@ class Sorting extends Component {
         'Bubble Sort': BubbleSort,
         'Selection Sort': SelectionSort,
         'Insertion Sort': InsertionSort,
-        'Merge Sort': MergeSort,
-        'Quick Sort': QuickSort,
-        'Quick Sort 3': QuickSort3,
-        'Heap Sort': HeapSort,
-        'Shell Sort': ShellSort
+
     };
 
     ALGORITHM_KEY = {
         'Bubble Sort': BubbleSortKey,
         'Selection Sort': SelectionSortKey,
         'Insertion Sort': InsertionSortKey,
-        'Merge Sort': MergeSortKey,
-        'Quick Sort': QuickSortKey,
-        'Quick Sort 3': QuickSort3Key,
-        'Heap Sort': HeapSortKey,
-        'Shell Sort': ShellSortKey
+
     };
 
     ALGORITHM_DESC = {
         'Bubble Sort': BubbleSortDesc,
         'Selection Sort': SelectionSortDesc,
         'Insertion Sort': InsertionSortDesc,
-        'Merge Sort': MergeSortDesc,
-        'Quick Sort': QuickSortDesc,
-        'Quick Sort 3': QuickSort3Desc,
-        'Heap Sort': HeapSortDesc,
-        'Shell Sort': ShellSortDesc
+
     };
     componentDidMount() {
         this.generateRandomArray();
@@ -127,9 +96,6 @@ class Sorting extends Component {
         }
     };
 
-    /*toggleDarkMode = () => {
-        this.setState((prevState) => ({ darkMode: !prevState.darkMode }));
-    };*/
 
     toggleSortingDrawer = () => {
         this.setState((prevState) => ({
@@ -139,11 +105,11 @@ class Sorting extends Component {
 
     render() {
         let theme = `Sorting`;
-        /* if (this.state.darkMode) theme += ` Sorting_dark`;*/
+
         if (this.state.sortingDrawerOpen) theme += ` Sorting_modal_open`;
 
         const colorKey = this.ALGORITHM_KEY[this.state.algorithm];
-        const desc = this.ALGORITHM_DESC[this.state.algorithm];
+
 
         const controls = (
             <SortingControls
@@ -152,8 +118,7 @@ class Sorting extends Component {
                 onAlgorithmChange={this.handleAlgorithmChange}
                 arraySize={this.state.arraySize}
                 onArraySizeChange={this.handleArraySizeChange}
-            /* onToggleDarkMode={this.toggleDarkMode}
-             darkMode={this.state.darkMode}*/
+
             />
         );
 
@@ -178,7 +143,7 @@ class Sorting extends Component {
                         array={this.state.array}
                         trace={this.state.trace}
                         colorKey={colorKey}
-                    //desc={desc}
+
                     />
                 </div>
 

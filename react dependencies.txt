@@ -1,0 +1,13 @@
+react dependencies
+
+sorting 
+    sorting algorithms
+    sorting components
+    sorting settings
+    sorting.css
+    sorting.js
+    SortingDark.css
+
+sorting.js
+import React, { Component } from 'react';
+
