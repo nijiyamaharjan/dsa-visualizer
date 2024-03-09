@@ -1,6 +1,6 @@
 // MainComponent.js
 import React from 'react';
-import BfsDfs from './components/bfs_dfs';
+import Canvas from './components/canvas';
 import ShortestPath from './components/ShortestPath';
 
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
@@ -18,7 +18,7 @@ function MainComponent() {
     <Routes>
       <Route path='/' element={<LandingPage/>} />
       <Route path='/home' element={<Home />} />
-      <Route path='/bfsdfs' element={<BfsDfs />} />
+      <Route path='/bfsdfs' element={<Canvas />} />
       <Route path='/dijkstra' element={<ShortestPath />} />
       <Route path='/Sorting' element={<Sorting />} />
       <Route path='/Tree' element={<Tree />} />
