@@ -247,13 +247,13 @@ class Tree extends Component {
 
             <button
               className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:ring-purple-500 focus-visible:ring-purple-500"
-              onClick={() => this.handleSpeedChange(750)}
+              onClick={() => this.handleSpeedChange(500)}
             >
               Medium
             </button>
             <button
               className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:ring-purple-500 focus-visible:ring-purple-500"
-              onClick={() => this.handleSpeedChange(500)}
+              onClick={() => this.handleSpeedChange(300)}
             >
               Fast
             </button>

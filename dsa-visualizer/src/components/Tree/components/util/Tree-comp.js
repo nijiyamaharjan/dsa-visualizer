@@ -1,7 +1,3 @@
-/*A tree data-structure which create a static binary tree
-This is used to get expected traversal order given the tree structure
-*/
-
 function Node(val) {
   this.value = val;
   this.left = null;
@@ -25,34 +21,8 @@ function Treecomp(rootNode) {
     if (targetNode === null) {
       this.root[dir] = newNode;
     } else {
-      const position = this.Traversal(targetNode); //returns the position of the targetNode
+      const position = this.findNode(targetNode); //returns the position of the targetNode
       position[dir] = newNode;
-    }
-  };
-
-  /*performs level order traversal. If given any node as an argument then return that node's position else
-  updates the sequence of the visited nodes*/
-  this.Traversal = function(searchNode = -1) {
-    const queue = [];
-    let currentNode = this.root;
-    queue.push(currentNode);
-    if (this.visited.length > 0) this.visited = [];
-    while (queue.length > 0) {
-      currentNode = queue.shift();
-      if (currentNode !== null) {
-        if (searchNode === -1) {
-          this.visited.push(currentNode.value);
-        }
-        if (currentNode.value === searchNode && searchNode !== -1) {
-          return currentNode;
-        }
-        if (currentNode.left !== null) {
-          queue.push(currentNode.left);
-        }
-        if (currentNode.right !== null) {
-          queue.push(currentNode.right);
-        }
-      }
     }
   };
 
@@ -88,6 +58,24 @@ function Treecomp(rootNode) {
 
   this.getTraversalOrder = function() {
     return this.visited;
+  };
+
+  // Helper function to find a node in the tree
+  this.findNode = function(searchNode) {
+    const stack = [this.root];
+    while (stack.length > 0) {
+      const currentNode = stack.pop();
+      if (currentNode.value === searchNode) {
+        return currentNode;
+      }
+      if (currentNode.right !== null) {
+        stack.push(currentNode.right);
+      }
+      if (currentNode.left !== null) {
+        stack.push(currentNode.left);
+      }
+    }
+    return null;
   };
 }
 
