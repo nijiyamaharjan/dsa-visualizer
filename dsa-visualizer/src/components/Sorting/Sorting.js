@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Sorting.css';
-import './SortingDark.css';
+
 
 import SortingControls from '../Sorting/SortingComponents/Sortingmolecules/SortingControls';
 import TopBar from '../Sorting/SortingComponents/Sortingorganisms/SortingTopBar';
@@ -20,30 +20,13 @@ import InsertionSort, {
     InsertionSortKey,
     InsertionSortDesc
 } from '../Sorting/SortingAlgorithms/InsertionSort';
-import MergeSort, {
-    MergeSortKey,
-    MergeSortDesc
-} from '../Sorting/SortingAlgorithms/MergeSort';
-import QuickSort, {
-    QuickSortKey,
-    QuickSortDesc
-} from '../Sorting/SortingAlgorithms/QuickSort';
-import QuickSort3, {
-    QuickSort3Key,
-    QuickSort3Desc
-} from '../Sorting/SortingAlgorithms/QuickSort3';
-import HeapSort, {
-    HeapSortKey,
-    HeapSortDesc
-} from '../Sorting/SortingAlgorithms/HeapSort';
-import ShellSort, {
-    ShellSortKey,
-    ShellSortDesc
-} from '../Sorting/SortingAlgorithms/ShellSort';
+
 
 class Sorting extends Component {
+    //main state of the sorting page consisting of array,size ,algorithm selsected
+    //at first kept to null, size to 10,dropdown button closed
     state = {
-        /* darkMode: false,*/
+
         array: [],
         arraySize: 10,
         trace: [],
@@ -55,35 +38,19 @@ class Sorting extends Component {
         'Bubble Sort': BubbleSort,
         'Selection Sort': SelectionSort,
         'Insertion Sort': InsertionSort,
-        'Merge Sort': MergeSort,
-        'Quick Sort': QuickSort,
-        'Quick Sort 3': QuickSort3,
-        'Heap Sort': HeapSort,
-        'Shell Sort': ShellSort
+
     };
 
     ALGORITHM_KEY = {
         'Bubble Sort': BubbleSortKey,
         'Selection Sort': SelectionSortKey,
         'Insertion Sort': InsertionSortKey,
-        'Merge Sort': MergeSortKey,
-        'Quick Sort': QuickSortKey,
-        'Quick Sort 3': QuickSort3Key,
-        'Heap Sort': HeapSortKey,
-        'Shell Sort': ShellSortKey
+
     };
 
-    ALGORITHM_DESC = {
-        'Bubble Sort': BubbleSortDesc,
-        'Selection Sort': SelectionSortDesc,
-        'Insertion Sort': InsertionSortDesc,
-        'Merge Sort': MergeSortDesc,
-        'Quick Sort': QuickSortDesc,
-        'Quick Sort 3': QuickSort3Desc,
-        'Heap Sort': HeapSortDesc,
-        'Shell Sort': ShellSortDesc
-    };
+
     componentDidMount() {
+        //generated new random array on every refresh
         this.generateRandomArray();
     }
 
@@ -99,6 +66,7 @@ class Sorting extends Component {
             .map(() => getRandomInt(this.state.arraySize * 5));
 
         this.setState(
+            //sets the generated array and also updates according to the play progress
             {
                 array,
                 trace: []
@@ -107,17 +75,21 @@ class Sorting extends Component {
         );
     };
 
+    //gives the algorithm value when changed and generated new random array every 
+    //time algortihm has been changed
     handleAlgorithmChange = (algorithm) => {
         this.setState({ algorithm }, this.generateRandomArray);
     };
 
+    //when size of array is changed it changes the state data and ensures that 
+    //size doesn't get out of range from 0 to 100
     handleArraySizeChange = (size) => {
         size = Number(size);
         size = size > 100 ? 100 : size;
         size = size < 0 ? 0 : size;
         this.setState({ arraySize: size }, this.generateRandomArray);
     };
-
+    //updates the array, the algorithm accordingly as play progress
     createTrace = () => {
         const numbers = [...this.state.array];
         const sort = this.ALGORITHM[this.state.algorithm];
@@ -127,9 +99,6 @@ class Sorting extends Component {
         }
     };
 
-    /*toggleDarkMode = () => {
-        this.setState((prevState) => ({ darkMode: !prevState.darkMode }));
-    };*/
 
     toggleSortingDrawer = () => {
         this.setState((prevState) => ({
@@ -138,26 +107,30 @@ class Sorting extends Component {
     };
 
     render() {
+
+        //for css labelling Sorting and sorting modal open(for when the drop down opens) for responsiveness
         let theme = `Sorting`;
-        /* if (this.state.darkMode) theme += ` Sorting_dark`;*/
+
         if (this.state.sortingDrawerOpen) theme += ` Sorting_modal_open`;
 
+        //sets colour theme according to algorithm chosen to be passed to sorting visualizer component
         const colorKey = this.ALGORITHM_KEY[this.state.algorithm];
-        const desc = this.ALGORITHM_DESC[this.state.algorithm];
+
 
         const controls = (
+            //event handling from when bottons clicked
             <SortingControls
                 onGenerateRandomArray={this.generateRandomArray}
                 algorithm={this.state.algorithm}
                 onAlgorithmChange={this.handleAlgorithmChange}
                 arraySize={this.state.arraySize}
                 onArraySizeChange={this.handleArraySizeChange}
-            /* onToggleDarkMode={this.toggleDarkMode}
-             darkMode={this.state.darkMode}*/
+
             />
         );
 
         return (
+            //theme for responsiveness to contrl css divs
             <div className={theme}>
                 <TopBar
                     drawerOpen={this.state.sortingDrawerOpen}
@@ -174,11 +147,12 @@ class Sorting extends Component {
                 </SortingDrawer>
 
                 <div className="Sorting__Body">
+                    {/* main body of sorting algorithm i.e. the video controls nad bars */}
                     <SortVisualizer
                         array={this.state.array}
                         trace={this.state.trace}
                         colorKey={colorKey}
-                    //desc={desc}
+
                     />
                 </div>
 

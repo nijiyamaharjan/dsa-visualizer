@@ -15,7 +15,7 @@ export class Canvas extends Component {
         }
     }
 
-    getMousePosition(event) { 
+    getMousePosition(event) {//gets mouse co ordinates and add new point to canvas
         this.reset()
         let x = event.clientX-this.refs.svg.getBoundingClientRect().left ;
         let y = event.clientY-this.refs.svg.getBoundingClientRect().top;
@@ -40,7 +40,7 @@ export class Canvas extends Component {
         this.forceUpdate();
     }
 
-    drawLine(e,idx){
+    drawLine(e,idx){//draws edge
         this.reset()
         let u=document.getElementById(`point${idx}`);
         u.style.fill='red';
@@ -87,7 +87,7 @@ export class Canvas extends Component {
         }
     }
 
-    reset(){
+    reset(){//resets animation
         for(let i=0;i<this.state.points.length;i++){
             if(document.getElementById(`point${i}`).style.fill==='blue' || document.getElementById(`point${i}`).style.fill===color1)
             document.getElementById(`point${i}`).style.fill='#000'
@@ -99,14 +99,14 @@ export class Canvas extends Component {
         }
     }
     
-    changeSrc(e){
+    changeSrc(e){//updates source vertex as entered by user
         let x=document.getElementById('src').value
         this.setState({
             src:x
         })
     }
 
-    clear(){
+    clear(){//clears canvas
         this.setState({
             points:[],
             edges:[],
@@ -120,7 +120,7 @@ export class Canvas extends Component {
     }
     
     //BFS TRAVERSAL OF GRAPH
-    bfsAnimations(s){
+    bfsAnimations(s){//generates animation for bfs
         let animations=[]
         let vis=[]
         for(let i=0;i<this.state.points.length;i++)
@@ -168,7 +168,7 @@ export class Canvas extends Component {
         return animations
     }
 
-    bfs(s){
+    bfs(s){//triggers bfs algorithm
         if(s>=this.state.points.length)
         return;
         this.reset()
@@ -236,7 +236,7 @@ export class Canvas extends Component {
         }
     }
 
-    dfsAnimations(s){
+    dfsAnimations(s){//generates animations for dfs
         var animations=[]
         let vis=[]
         for(let i=0;i<this.state.points.length;i++)
@@ -247,7 +247,7 @@ export class Canvas extends Component {
         return animations
     }
 
-    dfs(s){
+    dfs(s){//triggers dfs algorithm
         if(s>=this.state.points.length)
         return;
         const animations=this.dfsAnimations(s)
@@ -303,7 +303,7 @@ export class Canvas extends Component {
                 <Helmet>
         <title>BFS and DFS</title>
       </Helmet>
-            <center>
+            <center className='pt-4 pb-4'>
             <button className="button button4" onClick={()=>this.bfs(this.state.src)}>BFS</button>
             <button className="button button4" onClick={()=>this.dfs(this.state.src)}>DFS</button>
             <button className="button button4" onClick={()=>this.reset()}>Reset</button>

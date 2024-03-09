@@ -23,21 +23,18 @@ export class ShortestPath extends Component {
         }
     }
 
-    componentDidMount(){
-      //this.generateRandomGraph()
-    }
-    randomWeights(){
+    randomWeights(){ //generate random weights for edges of the graph
         for(let i=0;i<this.state.edges.length;i++)
         weights[i]=getRandomInt(1,50);
         this.reset()
         this.forceUpdate();
     }
-    addWeights()
+    addWeights() //add random weight for a new edge
     {
         weights.push(getRandomInt(1,50))
         this.forceUpdate()
     }
-    getMousePosition(event)
+    getMousePosition(event) //gets position of mouse click
     {
         this.reset()
         done=false
@@ -59,7 +56,7 @@ export class ShortestPath extends Component {
         this.forceUpdate();
     }
 
-    changeSrc(e){
+    changeSrc(e){ //changes source vertex as entered by user
         this.reset()
         done=false
         let x=document.getElementById('src').value
@@ -68,7 +65,7 @@ export class ShortestPath extends Component {
         })
     }
 
-    drawLine(idx){
+    drawLine(idx){// draws edge between two vertices and adds to the state
         this.reset()
         done=false
         let u=document.getElementById(`point${idx}`);
@@ -117,7 +114,7 @@ export class ShortestPath extends Component {
         }
     }
 
-    reset(){
+    reset(){//resets graph visualization
         done=false
         for(let i=0;i<this.state.points.length;i++){
             if(document.getElementById(`point${i}`).style.fill!=='red')
@@ -135,7 +132,7 @@ export class ShortestPath extends Component {
         parent=[]
         this.forceUpdate();
     }
-    clear(){
+    clear(){//clears canvas
         done=false
         this.setState({
             points:[],
@@ -151,38 +148,7 @@ export class ShortestPath extends Component {
         this.forceUpdate();
     }
 
-    //GENERATE RANDOM GRAPH
-    generateRandomGraph(){
-        let lx=this.refs.svg.getBoundingClientRect().left+15
-        let rx=this.refs.svg.getBoundingClientRect().left+this.refs.svg.clientWidth-15;
-
-        let ly=this.refs.svg.getBoundingClientRect().top+15
-        let ry=this.refs.svg.getBoundingClientRect().top+this.refs.svg.clientHeight-15;
-        let n=getRandomInt(5,12)
-        let i;
-        for(i=1;i<=n;i++)
-        {
-            let flag;
-            setTimeout(() => {
-                flag=this.getMousePosition({clientX:getRandomInt(lx,rx),clientY:getRandomInt(ly,ry)})
-            }, i*delay);
-            if(flag===false)
-            i--;
-        }
-        for(let j=1;j<=1.1*n;j++)
-        {
-            setTimeout(() => {
-                let aq=getRandomInt(0,n-1)
-                this.drawLine(aq)
-                aq=getRandomInt(0,n-1)
-                this.drawLine(" "+aq)
-            }, i*delay);
-            i++;
-        }
-    }
-
-    showPath(s){
-        
+    showPath(s){//highlights shortest path from source vertex to vertex 's'
         if(done===false)
         return
         let i=parent[s]
@@ -199,7 +165,7 @@ export class ShortestPath extends Component {
         }
     }
 
-    removePath(s){
+    removePath(s){//removes highlight
        
         if(done===false)
         return
@@ -218,7 +184,7 @@ export class ShortestPath extends Component {
     }
 
     //DIJKSTRA'S SHORTEST PATH ALGORITHM
-    minDist(dist,sptSet) 
+    minDist(dist,sptSet)//find vertex with minimum distance
     {
         // Initialize min value 
         let min = INT_MAX, min_index; 
@@ -230,7 +196,7 @@ export class ShortestPath extends Component {
                 }
         return min_index
     }
-    dijkstraAnimations(s){
+    dijkstraAnimations(s){//perform dijkstra's algorithm and return animation
         this.reset()
         let ar=[]
         for(let i=0;i<this.state.points.length;i++)
@@ -298,7 +264,7 @@ export class ShortestPath extends Component {
         return animations
     }
 
-    dijkstra(s){
+    dijkstra(s){//initiate algorithm visualization
         if(s>=this.state.points.length)
         return
         if(s==="" && s!=='0')
@@ -391,7 +357,7 @@ export class ShortestPath extends Component {
             <Helmet>
             <title>Dijkstra's Algorithm</title>
       </Helmet>
-            <center>
+            <center className='pt-4 pb-4'>
             <button className="button button4" onClick={()=>this.dijkstra(this.state.src)}>Dijkstra's Algorithm</button>
 
             <button className="button button4" onClick={()=>this.randomWeights()}>Randomize Edge Weights</button>

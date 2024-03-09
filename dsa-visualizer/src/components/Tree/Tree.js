@@ -78,7 +78,7 @@ class Tree extends Component {
       }
     };
 
-    this.state.speed=1000;
+    this.state.speed = 1000;
     this.tree = new Treecomp("1");
 
   }
@@ -223,7 +223,7 @@ class Tree extends Component {
       () => {
         setTimeout(() => {
           this.updateTraversalOrder();
-        }, 2500);
+        }, 1000);
       }
     );
   };
@@ -233,14 +233,31 @@ class Tree extends Component {
     return (
       <div className="app">
         <section className="left-container">
-        
+
           <div className="tree-diagram">
             <TreeDiagram data={this.state.treeData} />
           </div>
           <div className="speed-controls mt-10 ml-10 flex gap-5 ">
-            <button className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" onClick={() => this.handleSpeedChange(1000)}>Slow</button>
-            <button className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" onClick={() => this.handleSpeedChange(500)}>Medium</button>
-            <button className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" onClick={() => this.handleSpeedChange(250)}>Fast</button>
+            <button
+              className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:ring-purple-500 focus-visible:ring-purple-500"
+              onClick={() => this.handleSpeedChange(1000)}
+            >
+              Slow
+            </button>
+
+            <button
+              className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:ring-purple-500 focus-visible:ring-purple-500"
+              onClick={() => this.handleSpeedChange(500)}
+            >
+              Medium
+            </button>
+            <button
+              className="flex justify-center rounded-md bg-white px-3 py-2 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:ring-purple-500 focus-visible:ring-purple-500"
+              onClick={() => this.handleSpeedChange(300)}
+            >
+              Fast
+            </button>
+
           </div>
           <span className="subtitle">-------------------------------------ORDER OF TRAVERSAL-------------------------------</span>
           <div className="transition-list">

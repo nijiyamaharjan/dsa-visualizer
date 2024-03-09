@@ -25,10 +25,10 @@ export class GraphAlgorithm extends Component {
                                     </h3>
                                     <img src="https://visualgo.net/img/gif/dfsbfs.gif"></img><br></br>
                                     <NavLink to='/bfsdfs' style={{
-                                    display: 'block',
-                                    margin: 'auto',
-                                    width: 'fit-content'
-                                }} className="p-2 text-white bg-gray-700 hover:bg-black focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">BFS and DFS</NavLink>
+                                        display: 'block',
+                                        margin: 'auto',
+                                        width: 'fit-content'
+                                    }} className="p-2 text-white bg-gray-700 hover:bg-black focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">BFS and DFS</NavLink>
                                 </div>
                             </div>
                         </div>
@@ -39,20 +39,16 @@ export class GraphAlgorithm extends Component {
                                     <h3 className="card-title mb-4 text-lg text-white">
                                         Dijkstra's Shortest Path Algorithm
                                     </h3>
-                                
+
                                     <img src="https://visualgo.net/img/gif/sssp.gif"></img><br></br>
                                     <NavLink to='/dijkstra' style={{
-                                    display: 'block',
-                                    margin: 'auto',
-                                    width: 'fit-content'
-                                }} className="p-2 text-white bg-gray-700 hover:bg-black focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Dijkstra's Algorithm</NavLink>
+                                        display: 'block',
+                                        margin: 'auto',
+                                        width: 'fit-content'
+                                    }} className="p-2 text-white bg-gray-700 hover:bg-black focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Dijkstra's Algorithm</NavLink>
                                 </div>
                             </div>
                         </div>
-
-                        
-                        
-
                     </div>
                 </div>
             </div>
