@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-
 import TreeDiagram from "./components/TreeDiagram";
 import TransitionedList from "./components/TransitionedList";
 import TraversalInfo from "./components/TraversalInfo";
-
 import Dropdown from "./components/util/Options";
 import Treecomp from "./components/util/Tree-comp";
-
 import "./styles/App.css";
 
 class Tree extends Component {
