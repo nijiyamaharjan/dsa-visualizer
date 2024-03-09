@@ -1,8 +1,7 @@
 {
   "name": "dsa-visualizer",
   "version": "0.1.0",
-  "private": false,
-  "homepage": "https://nijiyamaharjan.github.io/dsa-visualizer",
+  "private": true,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -12,9 +11,8 @@
     "fontawesome": "^5.6.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-fontawesome": "^1.7.1",
     "react-helmet": "^6.1.0",
-    "react-icons": "^3.11.0",
+    "react-icons": "^3.8.0",
     "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
     "react-tree-graph": "^8.0.1",
@@ -24,9 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -47,8 +43,6 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1"
   }
 }
