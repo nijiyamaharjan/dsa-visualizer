@@ -303,7 +303,7 @@ export class Canvas extends Component {
                 <Helmet>
         <title>BFS and DFS</title>
       </Helmet>
-            <center>
+            <center className='pt-4 pb-4'>
             <button className="button button4" onClick={()=>this.bfs(this.state.src)}>BFS</button>
             <button className="button button4" onClick={()=>this.dfs(this.state.src)}>DFS</button>
             <button className="button button4" onClick={()=>this.reset()}>Reset</button>

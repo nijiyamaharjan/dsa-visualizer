@@ -357,7 +357,7 @@ export class ShortestPath extends Component {
             <Helmet>
             <title>Dijkstra's Algorithm</title>
       </Helmet>
-            <center>
+            <center className='pt-4 pb-4'>
             <button className="button button4" onClick={()=>this.dijkstra(this.state.src)}>Dijkstra's Algorithm</button>
 
             <button className="button button4" onClick={()=>this.randomWeights()}>Randomize Edge Weights</button>

@@ -5,8 +5,7 @@ import { Helmet } from 'react-helmet';
 function LandingPage() {
   return (
     <>
-    
-                <Helmet>
+      <Helmet>
         <title>Visualizer</title>
       </Helmet>
       <div className="min-h-screen flex items-center justify-center gradient-container">
