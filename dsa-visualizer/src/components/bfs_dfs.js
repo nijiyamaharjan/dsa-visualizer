@@ -4,7 +4,7 @@ let v1=null,v2=null;
 let adj=[]
 var delay=500
 var color1='rgb(0, 204, 0)';
-export class Canvas extends Component {
+export class BfsDfs extends Component {
     constructor(props) {
         super(props)
     
@@ -329,4 +329,4 @@ export class Canvas extends Component {
     }
 }
 
-export default Canvas
+export default BfsDfs
