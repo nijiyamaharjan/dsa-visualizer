@@ -21,7 +21,7 @@ export class Home extends Component {
                         </Helmet>
                         <div className="flex justify-center items-center mb-4 text-gray-700">
                             {/* {this.renderCard('DataStructures', 'Stack, Queue, Linked List', '/DataStructures', 'https://static.packt-cdn.com/products/9781785888731/graphics/image_13_007-1.jpg')} */}
-                            {this.renderCard('Sorting', 'Bubble, Insertion, Quick', '/Sorting', 'https://visualgo.net/img/gif/sorting.gif')}
+                            {this.renderCard('Sorting', 'Bubble/Insertion/Selection', '/Sorting', 'https://visualgo.net/img/gif/sorting.gif')}
 
                             {this.renderCard('Graph', 'Dijkstra, BFS, DFS', '/GraphAlgorithm', 'https://visualgo.net/img/gif/graphds.gif')}
                             {this.renderCard('Tree', 'Binary Tree Traversal', '/Tree', 'https://visualgo.net/img/gif/heap.gif')}
@@ -42,7 +42,7 @@ export class Home extends Component {
                             <h3 className="glassmorphism-title p-5">
                                 {title}
                             </h3>
-                            <img src={image} style={{ width: '150px', height: '150px' }} />
+                            <img src={image} style={{ width: '200px', height: 'auto' }} />
                             <p style={{ fontFamily: 'Georgia' }} className="glassmorphism-text p-10">
                                 {description}
                             </p>

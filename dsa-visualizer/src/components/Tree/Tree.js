@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from 'react-helmet';
 
 import TreeDiagram from "./components/TreeDiagram";
 import TransitionedList from "./components/TransitionedList";
@@ -232,6 +233,9 @@ class Tree extends Component {
   render() {
     return (
       <div className="app">
+        <Helmet>
+        <title>Binary Tree Traversal</title>
+      </Helmet>
         <section className="left-container">
 
           <div className="tree-diagram">
