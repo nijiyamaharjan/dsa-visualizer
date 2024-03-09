@@ -2,7 +2,8 @@
   /* Default Styles */
 
   --top-bar-row-height: 64px;
-  --top-bar-title-left-padding: 20px;
+  --top-bar-title-left-padding: 10px;
+  --top-bar-title-right-padding: 10px;
   --top-bar-section-vertical-padding: 8px;
   --top-bar-section-horizontal-padding: 12px;
   padding-right: 20px;
@@ -17,8 +18,9 @@
   width: 98%;
 
   /* margin-top: 2.5px; */
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top:7px;
   border-radius: 10px;
 
 
