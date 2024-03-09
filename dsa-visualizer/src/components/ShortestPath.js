@@ -149,7 +149,6 @@ export class ShortestPath extends Component {
     }
 
     showPath(s){//highlights shortest path from source vertex to vertex 's'
-        
         if(done===false)
         return
         let i=parent[s]
@@ -185,7 +184,7 @@ export class ShortestPath extends Component {
     }
 
     //DIJKSTRA'S SHORTEST PATH ALGORITHM
-    minDist(dist,sptSet) 
+    minDist(dist,sptSet)//find vertex with minimum distance
     {
         // Initialize min value 
         let min = INT_MAX, min_index; 
@@ -197,7 +196,7 @@ export class ShortestPath extends Component {
                 }
         return min_index
     }
-    dijkstraAnimations(s){
+    dijkstraAnimations(s){//perform dijkstra's algorithm and return animation
         this.reset()
         let ar=[]
         for(let i=0;i<this.state.points.length;i++)
@@ -265,7 +264,7 @@ export class ShortestPath extends Component {
         return animations
     }
 
-    dijkstra(s){
+    dijkstra(s){//initiate algorithm visualization
         if(s>=this.state.points.length)
         return
         if(s==="" && s!=='0')
