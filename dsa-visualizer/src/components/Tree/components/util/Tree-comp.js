@@ -13,6 +13,7 @@ function Treecomp(rootNode) {
   } else {
     throw new Error("Enter valid root element. Root node can't be empty");
   }
+  
   /*Inserts a new node to the tree. if targetnode is provided then adds the newNode to its left/right based on the value of direction
   provided as an argument and if not provided then set it as roots left or right child*/
   this.add = function(value, dir, targetNode = null) {

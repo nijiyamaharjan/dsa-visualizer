@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-
 import TreeDiagram from "./components/TreeDiagram";
 import TransitionedList from "./components/TransitionedList";
 import TraversalInfo from "./components/TraversalInfo";
-
-import Dropdown from "./components/util/Options";
 import Treecomp from "./components/util/Tree-comp";
-
+import Options from "./components/util/Options";
 import "./styles/App.css";
 
 class Tree extends Component {
@@ -38,21 +35,21 @@ class Tree extends Component {
         }
       ],
       treeData: {
-        name: "1",
+        name: "6",
         children: [
           {
-            name: "3",
+            name: "10",
             children: [
               {
-                name: "8"
+                name: "11"
               },
               {
-                name: "11",
+                name: "8",
                 children: [
                   {
                     name: "9"
                   },
-                  { name: "10" }
+                  { name: "7" }
                 ]
               }
             ]
@@ -61,16 +58,16 @@ class Tree extends Component {
             name: "2",
             children: [
               {
-                name: "5",
+                name: "4",
                 children: [
                   {
-                    name: "7"
+                    name: "5"
                   },
-                  { name: "6" }
+                  { name: "3" }
                 ]
               },
               {
-                name: "4"
+                name: "1"
               }
             ]
           }
@@ -79,26 +76,29 @@ class Tree extends Component {
     };
 
     this.state.speed = 1000;
-    this.tree = new Treecomp("1");
+    this.tree = new Treecomp("6");
 
   }
 
   handleSpeedChange = (speed) => {
     this.setState({ speed });
   };
+
   //This will build the tree data-structure with these static values
   componentDidMount() {
     this.tree.add("2", "left");
-    this.tree.add("3", "right");
-    this.tree.add("8", "right", "3");
-    this.tree.add("11", "left", "3");
-    this.tree.add("9", "right", "11");
-    this.tree.add("10", "left", "11");
-    this.tree.add("4", "left", "2");
-    this.tree.add("5", "right", "2");
-    this.tree.add("6", "left", "5");
-    this.tree.add("7", "right", "5");
+    this.tree.add("10", "right");
+    this.tree.add("11", "right","10");
+    this.tree.add("8", "left","10");
+    this.tree.add("11", "right","10");
+    this.tree.add("9", "right","8");
+    this.tree.add("7", "left","8");
+    this.tree.add("4", "right","2");
+    this.tree.add("1", "left","2");
+    this.tree.add("5", "right","4");
+    this.tree.add("3", "left","4");
   }
+
 
   /*This method will display order of traversal one by one in delayed manner the "if condition" makes sure that
   if user interrupts the traversal and selectes the new one before the old one gets completed the effect of old traversal
@@ -181,21 +181,21 @@ class Tree extends Component {
         list: [],
         traversalOrder: [],
         treeData: {
-          name: "1",
+          name: "6",
           children: [
             {
-              name: "3",
+              name: "10",
               children: [
                 {
-                  name: "8"
+                  name: "11"
                 },
                 {
-                  name: "11",
+                  name: "8",
                   children: [
                     {
                       name: "9"
                     },
-                    { name: "10" }
+                    { name: "7" }
                   ]
                 }
               ]
@@ -204,16 +204,16 @@ class Tree extends Component {
               name: "2",
               children: [
                 {
-                  name: "5",
+                  name: "4",
                   children: [
                     {
-                      name: "7"
+                      name: "5"
                     },
-                    { name: "6" }
+                    { name: "3" }
                   ]
                 },
                 {
-                  name: "4"
+                  name: "1"
                 }
               ]
             }
@@ -266,7 +266,7 @@ class Tree extends Component {
         </section>
         <section className="right-container">
           <div className="Dropdown">
-            <Dropdown
+            <Options
               title={this.state.selectedTraversal}
               handleTraversalChange={this.handleTraversalChange}
               options={this.state.buttonOptions}

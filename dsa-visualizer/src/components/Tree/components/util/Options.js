@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-export default class Dropdown extends React.Component {
+export default class Options extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
