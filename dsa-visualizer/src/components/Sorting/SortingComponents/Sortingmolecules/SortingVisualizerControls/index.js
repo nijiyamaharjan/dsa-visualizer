@@ -16,7 +16,7 @@ import Menu from '..//SortingMenu';
 function isDisabled(action, disabled = false) {
   return action === undefined || disabled;
 }
-
+//works with the animation control button, creates them accordingly as their state from sortvisualizer component,handles changes from function in sortvisualizer
 const VisualizerControls = ({
   // Actions
   onPlay,

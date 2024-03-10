@@ -4,7 +4,7 @@ import './Sorting.css';
 
 import SortingControls from '../Sorting/SortingComponents/Sortingmolecules/SortingControls';
 import TopBar from '../Sorting/SortingComponents/Sortingorganisms/SortingTopBar';
-import SortingDrawer from '../Sorting/SortingComponents/Sortingorganisms/SortingDrawer';
+//import SortingDrawer from '../Sorting/SortingComponents/Sortingorganisms/SortingDrawer';
 import SortVisualizer from '../Sorting/SortingComponents/Sortingorganisms/SortingSortVisualizer';
 
 
@@ -139,12 +139,12 @@ class Sorting extends Component {
                     {controls}
                 </TopBar>
 
-                <SortingDrawer
+                {/* <SortingDrawer
                     open={this.state.sortingDrawerOpen}
                     closeDrawer={this.toggleSortingDrawer}
                 >
                     {controls}
-                </SortingDrawer>
+                </SortingDrawer> */}
 
                 <div className="Sorting__Body">
                     {/* main body of sorting algorithm i.e. the video controls nad bars */}

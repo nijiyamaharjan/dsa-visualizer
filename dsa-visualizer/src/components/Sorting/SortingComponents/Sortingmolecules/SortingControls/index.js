@@ -3,17 +3,15 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 import Button from '../../Sortingatoms/SortingButton';
-//import Switch from '../../Sortingatoms/Switch';
 import Menu from '../SortingMenu';
-
+//generates menu for algorithms,size and also updates the render page and values of those selected anf utilizes function from sorting.js
 const SortingControls = ({
   algorithm,
   onAlgorithmChange,
   onGenerateRandomArray,
   arraySize,
   onArraySizeChange,
-  onToggleDarkMode,
-  darkMode
+
 }) => {
   return (
     <Fragment>
@@ -26,11 +24,7 @@ const SortingControls = ({
             'Bubble Sort',
             'Selection Sort',
             'Insertion Sort',
-            /*'Merge Sort',
-            'Quick Sort',
-            'Quick Sort 3',
-            'Heap Sort',
-            'Shell Sort'*/
+
           ]}
           selected={algorithm}
           onSelect={onAlgorithmChange}
