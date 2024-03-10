@@ -10,11 +10,13 @@ import {
 } from 'react-icons/md';
 import Button from '../../Sortingatoms/SortingButton';
 
+//lists the dropdown menu item along  when opened
 const MenuList = ({ open, items, onSelect }) => {
   return open ? (
     <ul className="Menu__List">
       {items.map((item, i) => (
         <li
+          //key item+index
           key={`${item}_${i}`}
           onClick={(evt) => {
             onSelect(evt, item);
@@ -27,6 +29,8 @@ const MenuList = ({ open, items, onSelect }) => {
     </ul>
   ) : null;
 };
+
+//creates menu in along with backfrop for menu and handles item select as passed on from parent component
 
 class Menu extends Component {
   state = {
@@ -75,6 +79,7 @@ class Menu extends Component {
                 {selected ? selected : placeholder}
               </div>
             )}
+            {/* setting up icon */}
             {noDropIcon ? null : (
               <Button
                 icon={this.state.open ? AngleUp : AngleDown}

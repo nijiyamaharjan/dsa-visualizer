@@ -26,20 +26,30 @@
 
 .ColorKey__Unsorted {
   border: 1px solid var(--text-color);
-  background-color: var(--white);
+  background-color: var(--gray-500);
 }
+
 .ColorKey__Sorted {
   background-color: var(--primary-dark);
 }
+
+/* comparing */
 .ColorKey__GroupA {
+  /* background-color: pink; */
+
   background-color: var(--amber);
 }
+
+/* swapping */
 .ColorKey__GroupB {
   background-color: var(--secondary);
 }
+
+/* overwrite from memory */
 .ColorKey__GroupC {
   background-color: var(--red);
 }
+
 .ColorKey__GroupD {
   background-color: var(--blue);
 }

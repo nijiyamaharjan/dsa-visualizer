@@ -6,8 +6,8 @@ import SortChart from '../SortingSortChart';
 import VisualizerControls from '../../Sortingmolecules/SortingVisualizerControls';
 import ProgressBar from '../../Sortingmolecules/SortingProgressBar';
 import ColorKey from '../../Sortingmolecules/SortingColorKey';
-import SortInfo from '../../Sortingmolecules/SortingSortInfo';
 
+//main body for assembling component of animation and like bars,play button etc,and handles button clicks
 class SortVisualizer extends Component {
   state = {
     trace: [],
@@ -24,7 +24,7 @@ class SortVisualizer extends Component {
     timeoutIds: [],
     playbackSpeed: 1
   };
-
+  //updating progress of sorting on internal container
   componentDidUpdate(prevProps) {
     if (prevProps.array !== this.props.array) {
       this._reset(this.props.array);
@@ -51,12 +51,14 @@ class SortVisualizer extends Component {
     });
   };
 
+  //clears timeout delays for each bar using inbuild method clearTimeout()
   clearTimeouts = () => {
     this.state.timeoutIds.forEach((timeoutId) =>
       clearTimeout(timeoutId)
     );
     this.setState({ timeoutIds: [] });
   };
+  //change visual state on screen accordingly as sorting progress
 
   _changeVisualState = (visualState) => {
     this.setState({
@@ -68,22 +70,25 @@ class SortVisualizer extends Component {
       sortedIndices: visualState.sortedIndices
     });
   };
-
+  //play button click controls, handles: tracing progress,chaging visuals 
   run = (trace) => {
     const timeoutIds = [];
+    //setting time related with shifting and sorting each individual bar
     const timer = 250 / this.state.playbackSpeed;
 
-    // Set a timeout for each item in the trace
+    // Set a timeoutId i.e delay for each sorting bar so that we can see the animation in the trace
     trace.forEach((item, i) => {
       let timeoutId = setTimeout(
         (item) => {
           this.setState(
             (prevState) => ({
+              //incresing the traceStep to track the progress to be used for skip and animation control
               traceStep: prevState.traceStep + 1
             }),
             this._changeVisualState(item)
           );
         },
+        //multiplying by i so the later bars have more time delay
         i * timer,
         item
       );
@@ -91,7 +96,7 @@ class SortVisualizer extends Component {
       timeoutIds.push(timeoutId);
     });
 
-    // Clear timeouts upon completion
+    // Clear timeIds upon completion
     let timeoutId = setTimeout(
       this.clearTimeouts,
       trace.length * timer
@@ -109,7 +114,7 @@ class SortVisualizer extends Component {
     const trace = this.state.trace.slice(this.state.traceStep);
     this.run(trace);
   };
-
+  //controls fror skip
   stepForward = () => {
     const trace = this.state.trace;
     const step = this.state.traceStep;
@@ -121,7 +126,7 @@ class SortVisualizer extends Component {
       );
     }
   };
-
+  //for backward skip
   stepBackward = () => {
     const trace = this.state.trace;
     const step = this.state.traceStep;
@@ -133,7 +138,7 @@ class SortVisualizer extends Component {
       );
     }
   };
-
+  //controls for when clicked on repeat button 
   repeat = () => {
     this.clearTimeouts();
     this.setState((prevState) => ({
@@ -145,10 +150,11 @@ class SortVisualizer extends Component {
     }));
     this.run(this.state.trace);
   };
-
+  //handles playback speed change
   adjustPlaybackSpeed = (speed) => {
     const playing = this.state.timeoutIds.length > 0;
     this.pause();
+    //number conversion of speed based on x: x stands for * when storing info sorting control
     const playbackSpeed = Number(speed.split('x')[0]);
     this.setState({ playbackSpeed }, () => {
       if (playing) this.continue();
@@ -172,6 +178,7 @@ class SortVisualizer extends Component {
 
 
         <div className="SortVisualizer__ProgressBar">
+          {/* for the status of progress of animation to change colour from gray to pink currently */}
           <ProgressBar
             width={
               this.state.trace.length > 0
@@ -189,6 +196,7 @@ class SortVisualizer extends Component {
               ? this.run.bind(this, this.state.trace)
               : this.continue.bind(this)
           }
+          //to ensure this points to correct object on callbacks
           onPause={this.pause.bind(this)}
           onForward={this.stepForward.bind(this)}
           onBackward={this.stepBackward.bind(this)}
@@ -210,7 +218,7 @@ class SortVisualizer extends Component {
 
         <ColorKey {...this.props.colorKey} />
 
-        {/* <SortInfo {...this.props.desc} /> */}
+
       </div>
     );
   }

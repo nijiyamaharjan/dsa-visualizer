@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 import Bar from '../../Sortingatoms//SortingBar';
-
+//gets the list of bars in their state, updates visuals for bars for animation 
 const getListOfBars = (
   numbers,
   maxNum,
@@ -14,6 +14,7 @@ const getListOfBars = (
   sortedIndices
 ) => {
   return numbers.map((num, i) => {
+    //setting same width for all bars and height according to the number associated
     let width = 100 / numbers.length;
     let height = (num / maxNum) * 100;
     let stateA = groupA.includes(i);
@@ -21,7 +22,7 @@ const getListOfBars = (
     let stateC = groupC.includes(i);
     let stateD = groupD.includes(i);
     let sorted = sortedIndices.includes(i);
-
+    //setting margin for responsiveness when number of bars changed
     let margin =
       i === numbers.length ? '0' : width > 3 ? '0.5rem' : '0.125rem';
     return (
@@ -51,6 +52,7 @@ const SortChart = ({
   sortedIndices
 }) => {
   return (
+    //renders list of bars
     <div className="SortChart">
       {getListOfBars(
         numbers,

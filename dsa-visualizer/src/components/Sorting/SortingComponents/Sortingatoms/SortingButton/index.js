@@ -4,7 +4,9 @@ import './style.css';
 import { CSS_CLASSES } from './constants';
 
 function buildClassNames(rootClass, ClassMappings, userClassName) {
+  //dynamic className for when we generate button
   let classNames = `${rootClass}`;
+  //generates array of object of ClassMapping with key as ClassName and append the classNames to form a collective sub classes of button and also has feature to add a user classname to the end of it to make it more specific
   Object.keys(ClassMappings).forEach((className) => {
     if (ClassMappings[className]) {
       classNames += ` ${className}`;
@@ -13,12 +15,12 @@ function buildClassNames(rootClass, ClassMappings, userClassName) {
   classNames += ` ${userClassName}`;
   return classNames;
 }
-
+//to build button with icon and initialize with concatenation of our defind icon clasName and the given prop
 function renderIcon(icon, iconClass) {
   const ICON = icon;
   return <ICON className={`${CSS_CLASSES.ICON} ${iconClass}`} />;
 }
-
+//main export
 const Button = ({
   className,
   raised,
@@ -33,7 +35,9 @@ const Button = ({
   onClick,
   children
 }) => {
+  //all the basic funcionality of button combined and plus added new name i.e(className) given when this component is called from other components
   const classNames = buildClassNames(
+    //setting default for buttons when called
     CSS_CLASSES.ROOT,
     {
       [CSS_CLASSES.DENSE]: dense,
@@ -44,7 +48,7 @@ const Button = ({
     },
     className
   );
-
+  //if button has linking
   if (href) {
     return (
       <a href={href} className={classNames} disabled={disabled}>
@@ -60,11 +64,14 @@ const Button = ({
       className={classNames}
       disabled={disabled}
     >
+      {/* displays icon or the text feed to it from calling component */}
       {icon ? renderIcon(icon, iconClass) : null}
       <span className="Button__Label">{children}</span>
     </button>
   );
 };
+
+//ensures that the data entered/fed is of the specified type like ClassName should be string
 
 Button.propTypes = {
   className: PropTypes.string,

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
 
+//indexing of the bars into sorted,comparing,swapping,overwrite
 const ColorKey = ({ groupA, groupB, groupC, groupD }) => {
   const keySorted =
     groupA || groupB || groupC || groupD ? (

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './style.css';
 import { CSS_CLASSES } from './constants';
 
+//building classNames for css styling under same name
 function buildClassNames(rootClass, ClassMappings, userClassName) {
   let classNames = `${rootClass}`;
   Object.keys(ClassMappings).forEach((className) => {
@@ -14,6 +15,7 @@ function buildClassNames(rootClass, ClassMappings, userClassName) {
   return classNames;
 }
 
+//background for sorting screen when dropdown is opened enabled by opaque option
 const Backdrop = ({ show, opaque, dark, className, onClick }) => {
   const classNames = buildClassNames(
     CSS_CLASSES.ROOT,
