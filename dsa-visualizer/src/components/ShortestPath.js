@@ -78,7 +78,7 @@ export class ShortestPath extends Component {
             u.style.fill='#000';
             u=document.getElementById(`point${v2}`);
             u.style.fill='#000';
-            for(let i=0;i<this.state.edges.length;i++)
+            for(let i=0;i<this.state.edges.length;i++)//checks if edge already exists
             {
                 if(this.state.edges[i].u===v1 && this.state.edges[i].v===v2)
                 {   v1=null
@@ -92,7 +92,7 @@ export class ShortestPath extends Component {
                     return
                 }
             }
-            if(v1===v2)
+            if(v1===v2)//if same point
             {
                 v1=null
                 v2=null
@@ -104,7 +104,7 @@ export class ShortestPath extends Component {
                     v:v2
                 })
             },function(){
-                this.addWeights()
+                this.addWeights()//updates edge weight
                 adj[v1].push({vertex:v2,edgeNo:this.state.edges.length-1})
                 adj[v2].push({vertex:v1,edgeNo:this.state.edges.length-1})
                 v1=null
@@ -211,7 +211,7 @@ export class ShortestPath extends Component {
             ar[this.state.edges[i].u][this.state.edges[i].v]=({wt:weights[i],edgeNo:i})
             ar[this.state.edges[i].v][this.state.edges[i].u]=({wt:weights[i],edgeNo:i})
         }
-        let vis=[]
+        let vis=[]//visited vertices
         for(let i=0;i<this.state.points.length;i++)
         vis[i]=false;
         let animations=[]
@@ -326,17 +326,17 @@ export class ShortestPath extends Component {
     }
     
     render() {
-        var pts=this.state.points.map((x,idx)=>{
+        var pts=this.state.points.map((x,idx)=>{//circles
             return(
             <circle key={"point"+idx} id={"point"+idx} cx={x.x} cy={x.y} r={r} stroke="black" onClick={(event)=>this.drawLine(idx)} strokeWidth="2" style={{fill:"#000",transition:'all .2s linear',cursor:'pointer'}} onMouseOver={()=>this.showPath(idx)} onMouseOut={()=>this.removePath(idx)}/>
             )
         })
-        var ptsidx=this.state.points.map((pt,idx)=>{
+        var ptsidx=this.state.points.map((pt,idx)=>{//text inside circles
             return(
                 <text key={"index"+idx} id={"index"+idx} fontSize="14" fontFamily="Arial" x={pt.x-4} y={pt.y+4} onClick={(event)=>this.drawLine(idx)} style={{fill:"#fff",transition:'all .2s linear',cursor:'pointer'}} onMouseOver={()=>this.showPath(idx)} onMouseOut={()=>this.removePath(idx)}>{idx}</text>
             )
         })
-        var lines=this.state.edges.map((q,idx)=>{
+        var lines=this.state.edges.map((q,idx)=>{//edges
             return(
                 <line key={"edge"+idx} id={"edge"+idx} x1={this.state.points[q.u].x} y1={this.state.points[q.u].y} x2={this.state.points[q.v].x} y2={this.state.points[q.v].y} style={{stroke:'red',strokeWidth:'2',zIndex:'-1',transition:'all .2s linear'}} />
             )

@@ -308,14 +308,14 @@ export class Canvas extends Component {
             <button className="button button4" onClick={()=>this.dfs(this.state.src)}>DFS</button>
             <button className="button button4" onClick={()=>this.reset()}>Reset</button>
             <button className="button button4" onClick={()=>this.clear()}>Clear Canvas</button>
-            <label style={{fontFamily:'Georgia'}}>&nbsp;&nbsp;&nbsp;Source/starting Vertex &nbsp;</label>
+            <label style={{fontFamily:'Georgia'}}>&nbsp;&nbsp;&nbsp;Source/Starting Vertex &nbsp;</label>
             <input type="text" style={{width:'25px'}} id="src" value={this.state.src} onChange={(e)=>this.changeSrc(e)} />
             </center>
             <center>
             <svg paintOrder='markers' ref='svg' width={window.innerWidth*.998} height={window.innerHeight*0.94} style={{backgroundColor:'#BEBEEC',cursor:'crosshair'}} onClick={(event)=>this.getMousePosition(event)}>
             <rect>
             <title>
-            1.Click to plot some points.&#13;2.Connect two points by clicking on them consecutively.&#13;3.Run the algo and Enjoy!!!
+            1.Click to plot some points.&#13;2.Connect two points by clicking on them consecutively.&#13;3.Run the algorithm.
             </title>
             </rect>
             {lines}
@@ -330,8 +330,3 @@ export class Canvas extends Component {
 }
 
 export default Canvas
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
