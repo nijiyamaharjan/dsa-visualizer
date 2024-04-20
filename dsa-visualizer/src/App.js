@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         {/* <Route path='/*' element={<MainComponent />} /> */}
-        <Route path='/*' element={<MainComponent />} />
+        <Route exact path='dsa-visualizer/' element={<MainComponent />} />
       </Routes>
     </BrowserRouter>
   );
