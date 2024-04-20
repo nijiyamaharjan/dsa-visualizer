@@ -9,7 +9,7 @@ function App() {
     <HashRouter base="/">
       <Routes>
         {/* <Route path='/*' element={<MainComponent />} /> */}
-        <Route exact path='/' element={<MainComponent />} />
+        <Route exact path='/*' element={<MainComponent />} />
       </Routes>
     </HashRouter>
   );
