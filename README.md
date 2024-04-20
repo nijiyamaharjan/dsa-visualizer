@@ -1,5 +1,6 @@
 ## ALGORITHMS VISUALIZER USING REACT
 https://nijiyamaharjan.github.io/dsa-visualizer/
+
 A tool to visualize algorithms for sorting, graph and tree. This project was done as part of our course for Data Structure And Algorithm (DSA) (CT 552)
 
 # Features
