@@ -1,7 +1,7 @@
 {
   "name": "dsa-visualizer",
   "version": "0.1.0",
-  "homepage": "https://nijiyamaharjan.github.io/dsa-visualizer",
+  "homepage": "https://nijiyamaharjan.github.io/dsa-visualizer/",
   "private": false,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
