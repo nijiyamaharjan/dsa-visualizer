@@ -4,5 +4,5 @@ A tool to visualize algorithms for sorting, graph and tree. This project was don
 # Features
 - Choose from a total of 9 major algorithms visualized
 - Animation controls including play,pause, skip forward/backward for sorting algorithms
-- Colour coded process for easy identification of ungoing action
+- Colour coded process for easy identification of ongoing action
 - Same graph can be traversed using different algorithms once created
